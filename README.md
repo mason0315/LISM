@@ -1,12 +1,69 @@
-🏗️ 核心架构设计项目采用 Spring Cloud Alibaba 体系进行微服务治理，实现了业务解耦与高并发支持。1. 服务拆分维度用户服务 (User Service)：负责 JWT 鉴权、RBAC 权限管理及人脸特征存储。图书服务 (Book Service)：核心业务逻辑，处理高频的借阅、归还及库存管理。AI 增强服务 (AI Service)：基于 Python Flask，封装 AnythingLLM API 与向量数据库，提供语义搜索。知识图谱服务 (Graph Service)：专门对接 Neo4j，维护图书-作者-学科的网状关联。2. 微服务治理网关中心：基于 Spring Cloud Gateway 实现统一入口、动态路由及黑名单过滤。配置/注册中心：使用 Nacos 进行服务发现与配置热更新。流量防护：集成 Sentinel 实现核心接口的熔断与降级，保障系统稳定性。分布式事务：采用 Seata (AT 模式) 解决跨服务借阅场景下的数据一致性问题。🌟 技术亮点与攻关🧠 智能 RAG 问答体系不同于传统的关键词搜索，本项目构建了 "知识图谱 + 大模型" 的双驱动模式：结构化检索：通过 Cypher 查询 Neo4j，精准定位学科层级关系。非结构化增强：利用 RAG (检索增强生成) 技术，将 PDF/Markdown 文档向量化，配合 LLM 提供专业回答。👤 生物识别与安全边缘计算提取：前端通过 face-api.js 在浏览器端完成人脸检测，减轻后端计算压力。多因子认证：结合 JWT 令牌与人脸特征双重校验，提升系统安全性。🚀 高性能优化实践多级缓存方案：利用 Redis 缓存热点书籍信息，配合 Caffeine 本地缓存，支撑高频查询。异步削峰：引入 RabbitMQ 处理逾期通知、日志记录等非核心链路，提升系统吞吐量。数据库调优：针对百万级数据完成索引优化，并实现读写分离架构。🛠️ 技术栈清单维度技术选型核心框架Spring Boot 3.x, Spring Cloud 2023, MyBatis-Plus中间件Nacos, Sentinel, Seata, RabbitMQ, RedisAI/算法Python 3.9, Flask, AnythingLLM, face-api.js数据库MySQL 8.0 (关系型), Neo4j (图数据库), ChromaDB (向量)前端Vue 3.5, TypeScript, Vite, Element Plus, Pinia运维Docker, Jenkins, Prometheus + Grafana📂 模块说明Plaintextlims-microservices/
-├── lims-gateway/           # API 网关 [统一鉴权、限流]
-├── lims-auth/              # 认证中心 [OAuth2 / JWT]
-├── lims-service/           # 业务逻辑微服务群
-│   ├── lims-service-user/  # 用户与人脸识别服务
-│   ├── lims-service-book/  # 图书与借阅服务
-│   └── lims-service-graph/ # 知识图谱服务
-├── lims-ai-engine/         # Python AI 引擎 [LLM/RAG]
-└── lims-common/            # 公共通用组件库
-📈 性能表现根据压测报告（详见 docs/optimization.md）：吞吐量：核心借阅接口 QPS 提升了 300%。延迟：通过 Redis 预热，图书检索平均响应时间压低至 50ms 以内。一致性：Seata 成功处理了 99.9% 的分布式环境异常回滚。🚀 快速启动环境准备：确保本地已启动 MySQL, Redis, Nacos 和 Neo4j。配置 Nacos：将 config/ 下的配置文件导入 Nacos 配置中心。编译项目：Bashmvn clean install
-启动服务：依次启动 Gateway、Auth、User、Book 等服务。AI 服务：Bashcd lims-ai-engine && pip install -r requirements.txt && python main.py
-✉️ 联系与反馈如果你对这个项目的架构感兴趣，或者有任何建议，欢迎提交 Pull Request 或联系我。
+# LIMS-Pro: 智能化图书管理与知识服务系统 (全栈/演进式架构)
+
+[![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
+[![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2023-blue.svg)](https://spring.io/projects/spring-cloud)
+[![Vue](https://img.shields.io/badge/Vue-3.5-brightgreen.svg)](https://vuejs.org/)
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
+[![Neo4j](https://img.shields.io/badge/Neo4j-GraphDB-blueviolet.svg)](https://neo4j.com/)
+
+**LIMS-Pro** 是一个涵盖了**单体应用**与**分布式微服务**双重架构实现的现代化图书知识管理系统。项目不仅实现了业务的深度解耦，还集成了 **Neo4j 知识图谱**、**LLM (RAG) 智能问答**以及**人脸识别**等前沿 AI 技术，是一个极具工程实践价值的“全栈+AI”项目。
+
+---
+
+## 🏗️ 架构演进与设计
+
+本项目最大的特色在于其**演进式架构设计**，仓库中同时保留并优化了两套后端实现：
+
+1.  **单体架构 (`Back/bookmanagement`)**：基于 Spring Boot 3.4.3 的标准分层架构，适合快速部署和中小规模应用。
+2.  **微服务架构 (`Back/microservices`)**：基于 Spring Cloud Alibaba 的分布式系统，实现了用户、图书、借阅、人脸识别等 10+ 个微服务的独立拆分。
+
+
+
+---
+
+## 🌟 技术亮点
+
+### 1. 异构语言协同 (Java + Python)
+* **Java (Core Business)**：处理核心借阅逻辑、事务控制与权限治理。
+* **Python (AI & Graph)**：利用 Flask 封装智能问答引擎，对接 AnythingLLM API，并通过 Neo4j 实现图书关系的深度拓扑检索。
+
+### 2. 知识图谱与 RAG 增强
+* **数据治理**：在 `LISM Knowledge Graph/` 下包含完整的图谱构建脚本（Excel 导入、数据清洗、关系构建）。
+* **RAG 实现**：结合向量检索与图谱路径查询，提供比传统 SQL 检索更精准的知识问答体验。
+
+### 3. 分布式治理实践
+* **网关/限流**：Gateway + JWT 统一鉴权，Sentinel 核心接口防雪崩。
+* **一致性保障**：引入 Seata AT 模式，确保跨服务调用时的分布式事务一致性。
+
+### 4. 生物识别安全
+* **前端检测**：`face-api.js` 在浏览器端完成面部捕捉。
+* **后端比对**：Java 模块对接百度 AI，实现毫秒级的人脸登录验证。
+
+---
+
+## 🛠️ 技术栈
+
+| 领域 | 核心选型 |
+| :--- | :--- |
+| **Java 后端** | Spring Boot 3.4, Spring Cloud 2023, MyBatis-Plus, Nacos, Seata, Sentinel |
+| **Python 后端** | Flask, Neo4j-Handler, LangChain/AnythingLLM API |
+| **前端应用** | Vue 3.5, TypeScript, Vite, Pinia, Element Plus, face-api.js |
+| **数据层** | MySQL 8.0, Redis (多级缓存), Neo4j (知识图谱) |
+
+---
+
+## 📂 目录结构说明
+
+```text
+LIMS/
+├── Back/                      # Java 后端主目录
+│   ├── bookmanagement/        # [单体版] Spring Boot 核心业务
+│   └── microservices/         # [微服务版] Spring Cloud 分布式群
+│       ├── gateway-service/   # 统一入口网关
+│       ├── auth-service/      # 认证授权中心
+│       ├── face-service/      # 人脸识别专用微服务
+│       └── ...                # 其他业务微服务 (图书、借阅、留言等)
+├── Back(python)/              # Python AI 引擎 (Flask + LLM + Neo4j 处理器)
+├── Front/vue-bookman/         # Vue 3 前端工程 (TS 版)
+├── LISM Knowledge Graph/      # 知识图谱初始化模块 (Excel 数据与导入脚本)
+└── README/                    # 深度技术文档 (架构分析、性能优化、亮点解析)
