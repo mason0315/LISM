@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/LIMS/Back/bookmanagement/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/auth-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/auth-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/book-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/book-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/borrow-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/borrow-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/comment-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/comment-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/face-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/face-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/gateway-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/shelves-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/shelves-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/suggestion-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/suggestion-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LIMS/Back/microservices/user-service/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

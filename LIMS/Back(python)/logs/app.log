@@ -1,0 +1,137 @@
+2025-10-22 19:15:49,288 - werkzeug - WARNING -  * Debugger is active!
+2025-10-22 19:15:49,293 - werkzeug - INFO -  * Debugger PIN: 364-447-739
+2025-10-22 19:16:54,837 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-22 19:16:54,837 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-22 19:17:15,276 - app - INFO - 使用默认模型: 未指定, workspace_id=1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:17:15,276 - app - INFO - 使用默认模型: 未指定, workspace_id=1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:17:15,277 - app - INFO - 收到问题: 《百年孤独》的作者是谁？
+2025-10-22 19:17:15,277 - app - INFO - 收到问题: 《百年孤独》的作者是谁？
+2025-10-22 19:17:15,279 - app - INFO - 历史记录数量: 0
+2025-10-22 19:17:15,279 - app - INFO - 历史记录数量: 0
+2025-10-22 19:17:15,280 - app - INFO - ===== 开始调用AnythingLLM =====
+2025-10-22 19:17:15,280 - app - INFO - ===== 开始调用AnythingLLM =====
+2025-10-22 19:17:15,280 - app - INFO - 使用配置: BASE_URL=http://localhost:3001, WORKSPACE_ID=1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:17:15,280 - app - INFO - 使用配置: BASE_URL=http://localhost:3001, WORKSPACE_ID=1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:17:15,280 - app - INFO - 当前workspace_id: 1c09e02c-5c1b-490f-b52c-36c977f79699, 是否深度思考模式: False, NEO4J_ENABLED: True
+2025-10-22 19:17:15,280 - app - INFO - 当前workspace_id: 1c09e02c-5c1b-490f-b52c-36c977f79699, 是否深度思考模式: False, NEO4J_ENABLED: True
+2025-10-22 19:17:15,280 - app - INFO - 未使用知识图谱增强: 深度思考模式=False, Neo4j启用=True
+2025-10-22 19:17:15,280 - app - INFO - 未使用知识图谱增强: 深度思考模式=False, Neo4j启用=True
+2025-10-22 19:17:15,281 - app - INFO - ===== 准备调用AnythingLLM API =====
+2025-10-22 19:17:15,281 - app - INFO - ===== 准备调用AnythingLLM API =====
+2025-10-22 19:17:15,281 - app - INFO - URL: http://localhost:3001/api/v1/workspace/1c09e02c-5c1b-490f-b52c-36c977f79699/chat
+2025-10-22 19:17:15,281 - app - INFO - URL: http://localhost:3001/api/v1/workspace/1c09e02c-5c1b-490f-b52c-36c977f79699/chat
+2025-10-22 19:17:15,282 - app - INFO - 工作区ID: 1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:17:15,282 - app - INFO - 工作区ID: 1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:17:15,282 - app - INFO - 提示词长度: 12 字符
+2025-10-22 19:17:15,282 - app - INFO - 提示词长度: 12 字符
+2025-10-22 19:17:15,282 - app - INFO - 用户问题前100字符: 《百年孤独》的作者是谁？...
+2025-10-22 19:17:15,282 - app - INFO - 用户问题前100字符: 《百年孤独》的作者是谁？...
+2025-10-22 19:17:15,282 - app - INFO - 知识图谱查询深度: 未启用
+2025-10-22 19:17:15,282 - app - INFO - 知识图谱查询深度: 未启用
+2025-10-22 19:17:15,283 - app - INFO - 正在发送POST请求到AnythingLLM服务...
+2025-10-22 19:17:15,283 - app - INFO - 正在发送POST请求到AnythingLLM服务...
+2025-10-22 19:17:15,286 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:3001
+2025-10-22 19:17:32,371 - urllib3.connectionpool - DEBUG - http://localhost:3001 "POST /api/v1/workspace/1c09e02c-5c1b-490f-b52c-36c977f79699/chat HTTP/1.1" 200 628
+2025-10-22 19:17:32,372 - app - INFO - ===== 收到AnythingLLM响应 =====
+2025-10-22 19:17:32,372 - app - INFO - ===== 收到AnythingLLM响应 =====
+2025-10-22 19:17:32,373 - app - INFO - 状态码: 200
+2025-10-22 19:17:32,373 - app - INFO - 状态码: 200
+2025-10-22 19:17:32,373 - app - INFO - 响应时间: 17.09 秒
+2025-10-22 19:17:32,373 - app - INFO - 响应时间: 17.09 秒
+2025-10-22 19:17:32,373 - app - INFO - 响应头: {'X-Powered-By': 'Express', 'Vary': 'Origin', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '628', 'ETag': 'W/"274-06TIj3AjStTPgr4qvLfzXowILHg"', 'Date': 'Wed, 22 Oct 2025 11:17:32 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}
+2025-10-22 19:17:32,373 - app - INFO - 响应头: {'X-Powered-By': 'Express', 'Vary': 'Origin', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '628', 'ETag': 'W/"274-06TIj3AjStTPgr4qvLfzXowILHg"', 'Date': 'Wed, 22 Oct 2025 11:17:32 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}
+2025-10-22 19:17:32,374 - app - INFO - 响应内容长度: 403 字符
+2025-10-22 19:17:32,374 - app - INFO - 响应内容长度: 403 字符
+2025-10-22 19:17:32,374 - app - INFO - 响应内容前300字符: {"id":"fa709352-3e6d-4ddf-bb6d-9d018077c5e5","type":"textResponse","close":true,"error":null,"chatId":191,"textResponse":"《百年孤独》的作者是阿根廷作家加西亚·马尔克斯（Jorge Luis Borges）。这本书是一部世界文学经典，被誉为拉丁美洲Modernismo的代表作之一。书中的故事围绕马孔多镇展开，讲述了100年的变迁，探讨了孤独、时间、记忆等主题，并因其深刻的思想性和独特的叙事风格而广受好评。","sources":[],"metrics":{"prompt_t...
+2025-10-22 19:17:32,374 - app - INFO - 响应内容前300字符: {"id":"fa709352-3e6d-4ddf-bb6d-9d018077c5e5","type":"textResponse","close":true,"error":null,"chatId":191,"textResponse":"《百年孤独》的作者是阿根廷作家加西亚·马尔克斯（Jorge Luis Borges）。这本书是一部世界文学经典，被誉为拉丁美洲Modernismo的代表作之一。书中的故事围绕马孔多镇展开，讲述了100年的变迁，探讨了孤独、时间、记忆等主题，并因其深刻的思想性和独特的叙事风格而广受好评。","sources":[],"metrics":{"prompt_t...
+2025-10-22 19:17:32,374 - app - INFO - 成功解析JSON响应
+2025-10-22 19:17:32,374 - app - INFO - 成功解析JSON响应
+2025-10-22 19:17:32,375 - app - INFO - 响应数据结构: ['id', 'type', 'close', 'error', 'chatId', 'textResponse', 'sources', 'metrics']
+2025-10-22 19:17:32,375 - app - INFO - 响应数据结构: ['id', 'type', 'close', 'error', 'chatId', 'textResponse', 'sources', 'metrics']
+2025-10-22 19:17:32,375 - app - INFO - 响应数据有效性验证通过
+2025-10-22 19:17:32,375 - app - INFO - 响应数据有效性验证通过
+2025-10-22 19:17:32,375 - app - INFO - ===== 回答处理详情 =====
+2025-10-22 19:17:32,375 - app - INFO - ===== 回答处理详情 =====
+2025-10-22 19:17:32,375 - app - INFO - 原始回答长度: 143 字符
+2025-10-22 19:17:32,375 - app - INFO - 原始回答长度: 143 字符
+2025-10-22 19:17:32,375 - app - INFO - 原始回答前100字符: 《百年孤独》的作者是阿根廷作家加西亚·马尔克斯（Jorge Luis Borges）。这本书是一部世界文学经典，被誉为拉丁美洲Modernismo的代表作之一。书中的故事围绕马孔多镇展开，讲述了100...
+2025-10-22 19:17:32,375 - app - INFO - 原始回答前100字符: 《百年孤独》的作者是阿根廷作家加西亚·马尔克斯（Jorge Luis Borges）。这本书是一部世界文学经典，被誉为拉丁美洲Modernismo的代表作之一。书中的故事围绕马孔多镇展开，讲述了100...
+2025-10-22 19:17:32,376 - app - INFO - 未检测到思考过程标记
+2025-10-22 19:17:32,376 - app - INFO - 未检测到思考过程标记
+2025-10-22 19:17:32,376 - app - INFO - 处理后回答长度: 143 字符
+2025-10-22 19:17:32,376 - app - INFO - 处理后回答长度: 143 字符
+2025-10-22 19:17:32,376 - app - INFO - 处理后回答前100字符: 《百年孤独》的作者是阿根廷作家加西亚·马尔克斯（Jorge Luis Borges）。这本书是一部世界文学经典，被誉为拉丁美洲Modernismo的代表作之一。书中的故事围绕马孔多镇展开，讲述了100...
+2025-10-22 19:17:32,376 - app - INFO - 处理后回答前100字符: 《百年孤独》的作者是阿根廷作家加西亚·马尔克斯（Jorge Luis Borges）。这本书是一部世界文学经典，被誉为拉丁美洲Modernismo的代表作之一。书中的故事围绕马孔多镇展开，讲述了100...
+2025-10-22 19:17:32,376 - app - INFO - ===== 回答处理完成 =====
+2025-10-22 19:17:32,376 - app - INFO - ===== 回答处理完成 =====
+2025-10-22 19:17:32,376 - app - INFO - 总响应时间: 17.09 秒
+2025-10-22 19:17:32,376 - app - INFO - 总响应时间: 17.09 秒
+2025-10-22 19:17:32,376 - app - INFO - 知识图谱增强: 未启用
+2025-10-22 19:17:32,376 - app - INFO - 知识图谱增强: 未启用
+2025-10-22 19:17:32,377 - werkzeug - INFO - 127.0.0.1 - - [22/Oct/2025 19:17:32] "POST /api/ai/chat-with-anythingllm HTTP/1.1" 200 -
+2025-10-22 19:18:06,857 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Hzy\\Desktop\\向量数据库和知识图谱\\LIMS 作品源码\\LIMS 作品源码\\Back(python)\\app.py', reloading
+2025-10-22 19:19:53,446 - app - INFO - 使用默认模型: 未指定, workspace_id=1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:19:53,447 - app - INFO - 收到问题: 《百年孤独》的作者是谁？
+2025-10-22 19:19:53,447 - app - INFO - 历史记录数量: 0
+2025-10-22 19:19:53,447 - app - INFO - ===== 开始调用AnythingLLM =====
+2025-10-22 19:19:53,448 - app - INFO - 使用配置: BASE_URL=http://localhost:3001, WORKSPACE_ID=1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:19:53,448 - app - INFO - 当前workspace_id: 1c09e02c-5c1b-490f-b52c-36c977f79699, 是否深度思考模式: False, NEO4J_ENABLED: True
+2025-10-22 19:19:53,448 - app - INFO - 未使用知识图谱增强: 深度思考模式=False, Neo4j启用=True
+2025-10-22 19:19:53,448 - app - INFO - ===== 准备调用AnythingLLM API =====
+2025-10-22 19:19:53,449 - app - INFO - URL: http://localhost:3001/api/v1/workspace/1c09e02c-5c1b-490f-b52c-36c977f79699/chat
+2025-10-22 19:19:53,449 - app - INFO - 工作区ID: 1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:19:53,449 - app - INFO - 提示词长度: 12 字符
+2025-10-22 19:19:53,450 - app - INFO - 用户问题前100字符: 《百年孤独》的作者是谁？...
+2025-10-22 19:19:53,450 - app - INFO - 知识图谱查询深度: 未启用
+2025-10-22 19:19:53,450 - app - INFO - 正在发送POST请求到AnythingLLM服务...
+2025-10-22 19:20:03,782 - app - INFO - ===== 收到AnythingLLM响应 =====
+2025-10-22 19:20:03,782 - app - INFO - 状态码: 200
+2025-10-22 19:20:03,782 - app - INFO - 响应时间: 10.33 秒
+2025-10-22 19:20:03,782 - app - INFO - 响应头: {'X-Powered-By': 'Express', 'Vary': 'Origin', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '746', 'ETag': 'W/"2ea-JhWSQKNNePfLZJs+jhcCtcrsvSs"', 'Date': 'Wed, 22 Oct 2025 11:20:03 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}
+2025-10-22 19:20:03,782 - app - INFO - 响应内容长度: 436 字符
+2025-10-22 19:20:03,782 - app - INFO - 响应内容前300字符: {"id":"949e92b1-57da-42b8-a6e9-5ad404df017e","type":"textResponse","close":true,"error":null,"chatId":192,"textResponse":"《百年孤独》的作者是阿根廷作家加西亚·阿尔卡蒂奥·巴尔克斯（Gastón Acevedo Barba）。这部作品被认为是魔幻现实主义的代表作之一，讲述了布宜诺斯艾利斯一个家族在一个世纪中的兴衰史。小说通过一系列离奇古怪的事件，展现了主人公何塞·阿尔卡蒂奥及其家人在政治、宗教和社会压力下的挣扎与变迁。书中有大量历史事件和神话传说的重构，充满了魔幻色彩。",...
+2025-10-22 19:20:03,783 - app - INFO - 成功解析JSON响应
+2025-10-22 19:20:03,783 - app - INFO - 响应数据结构: ['id', 'type', 'close', 'error', 'chatId', 'textResponse', 'sources', 'metrics']
+2025-10-22 19:20:03,783 - app - INFO - 响应数据有效性验证通过
+2025-10-22 19:20:03,783 - app - INFO - ===== 回答处理详情 =====
+2025-10-22 19:20:03,783 - app - INFO - 原始回答长度: 176 字符
+2025-10-22 19:20:03,783 - app - INFO - 原始回答前100字符: 《百年孤独》的作者是阿根廷作家加西亚·阿尔卡蒂奥·巴尔克斯（Gastón Acevedo Barba）。这部作品被认为是魔幻现实主义的代表作之一，讲述了布宜诺斯艾利斯一个家族在一个世纪中的兴衰史。小说...
+2025-10-22 19:20:03,784 - app - INFO - 未检测到思考过程标记
+2025-10-22 19:20:03,784 - app - INFO - 处理后回答长度: 176 字符
+2025-10-22 19:20:03,784 - app - INFO - 处理后回答前100字符: 《百年孤独》的作者是阿根廷作家加西亚·阿尔卡蒂奥·巴尔克斯（Gastón Acevedo Barba）。这部作品被认为是魔幻现实主义的代表作之一，讲述了布宜诺斯艾利斯一个家族在一个世纪中的兴衰史。小说...
+2025-10-22 19:20:03,784 - app - INFO - ===== 回答处理完成 =====
+2025-10-22 19:20:03,784 - app - INFO - 总响应时间: 10.33 秒
+2025-10-22 19:20:03,784 - app - INFO - 知识图谱增强: 未启用
+2025-10-22 19:22:16,824 - app - INFO - 使用默认模型: 未指定, workspace_id=1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:22:16,825 - app - INFO - 收到问题: 《百年孤独》的作者是谁？
+2025-10-22 19:22:16,825 - app - INFO - 历史记录数量: 0
+2025-10-22 19:22:16,826 - app - INFO - ===== 开始调用AnythingLLM =====
+2025-10-22 19:22:16,826 - app - INFO - 使用配置: BASE_URL=http://localhost:3001, WORKSPACE_ID=1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:22:16,826 - app - INFO - 当前workspace_id: 1c09e02c-5c1b-490f-b52c-36c977f79699, 是否深度思考模式: False, NEO4J_ENABLED: True
+2025-10-22 19:22:16,826 - app - INFO - 未使用知识图谱增强: 深度思考模式=False, Neo4j启用=True
+2025-10-22 19:22:16,826 - app - INFO - ===== 准备调用AnythingLLM API =====
+2025-10-22 19:22:16,827 - app - INFO - URL: http://localhost:3001/api/v1/workspace/1c09e02c-5c1b-490f-b52c-36c977f79699/chat
+2025-10-22 19:22:16,827 - app - INFO - 工作区ID: 1c09e02c-5c1b-490f-b52c-36c977f79699
+2025-10-22 19:22:16,827 - app - INFO - 提示词长度: 12 字符
+2025-10-22 19:22:16,827 - app - INFO - 用户问题前100字符: 《百年孤独》的作者是谁？...
+2025-10-22 19:22:16,827 - app - INFO - 知识图谱查询深度: 未启用
+2025-10-22 19:22:16,827 - app - INFO - 正在发送POST请求到AnythingLLM服务...
+2025-10-22 19:22:26,781 - app - INFO - ===== 收到AnythingLLM响应 =====
+2025-10-22 19:22:26,782 - app - INFO - 状态码: 200
+2025-10-22 19:22:26,782 - app - INFO - 响应时间: 9.95 秒
+2025-10-22 19:22:26,782 - app - INFO - 响应头: {'X-Powered-By': 'Express', 'Vary': 'Origin', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '482', 'ETag': 'W/"1e2-IfwkFGEE/8AeZDTBF/KIHt1yuKk"', 'Date': 'Wed, 22 Oct 2025 11:22:26 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}
+2025-10-22 19:22:26,782 - app - INFO - 响应内容长度: 345 字符
+2025-10-22 19:22:26,783 - app - INFO - 响应内容前300字符: {"id":"a7c3d51a-7b0e-4a6a-8065-efaaf1b91a3a","type":"textResponse","close":true,"error":null,"chatId":193,"textResponse":"《百年孤独》的作者是阿根廷作家路易斯·马尔克斯（Louis Mar Delasys）。这本书是一部以秘鲁安第斯山脉地区的孤独家族为背景的小说，探讨了孤独、权力和人性等主题。","sources":[],"metrics":{"prompt_tokens":372,"completion_tokens":237,"total_tokens":609,"ou...
+2025-10-22 19:22:26,783 - app - INFO - 成功解析JSON响应
+2025-10-22 19:22:26,783 - app - INFO - 响应数据结构: ['id', 'type', 'close', 'error', 'chatId', 'textResponse', 'sources', 'metrics']
+2025-10-22 19:22:26,783 - app - INFO - 响应数据有效性验证通过
+2025-10-22 19:22:26,783 - app - INFO - ===== 回答处理详情 =====
+2025-10-22 19:22:26,784 - app - INFO - 原始回答长度: 86 字符
+2025-10-22 19:22:26,784 - app - INFO - 原始回答前100字符: 《百年孤独》的作者是阿根廷作家路易斯·马尔克斯（Louis Mar Delasys）。这本书是一部以秘鲁安第斯山脉地区的孤独家族为背景的小说，探讨了孤独、权力和人性等主题。...
+2025-10-22 19:22:26,784 - app - INFO - 未检测到思考过程标记
+2025-10-22 19:22:26,784 - app - INFO - 处理后回答长度: 86 字符
+2025-10-22 19:22:26,784 - app - INFO - 处理后回答前100字符: 《百年孤独》的作者是阿根廷作家路易斯·马尔克斯（Louis Mar Delasys）。这本书是一部以秘鲁安第斯山脉地区的孤独家族为背景的小说，探讨了孤独、权力和人性等主题。...
+2025-10-22 19:22:26,784 - app - INFO - ===== 回答处理完成 =====
+2025-10-22 19:22:26,784 - app - INFO - 总响应时间: 9.95 秒
+2025-10-22 19:22:26,784 - app - INFO - 知识图谱增强: 未启用

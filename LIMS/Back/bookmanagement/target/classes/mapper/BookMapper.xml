@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.upc.bookmanagement.mapper.BookMapper">
+
+    <resultMap id="Base_Book_List" type="com.upc.bookmanagement.entity.Book">
+        <id property="title" column="title"/>
+        <result property="author" column="author"/>
+        <result property="publisher" column="publisher"/>
+        <result property="avaBooks" column="ava_books"/>
+        <result property="stock" column="stock"/>
+        <result property="category" column="category"/>
+        <result property="language" column="language"/>
+        <result property="description" column="description"/>
+        <result property="cover" column="cover"/>
+    </resultMap>
+
+    <sql id="Base_colum">
+        title, author, publisher, ava_books, stock, category, language, description,cover
+    </sql>
+
+    <select id="findAllBookOrderByLoveDesc" resultType="com.upc.bookmanagement.entity.Book">
+        SELECT * FROM book ORDER BY love DESC
+    </select>
+
+    <select id="searchBySubstrings" resultMap="Base_Book_List">
+        SELECT
+        <include refid="Base_colum"/>,
+        (
+        <foreach collection="substrings" item="substring" separator=" + ">
+            (CASE
+            WHEN title LIKE CONCAT('%', #{substring}, '%') THEN ${substring.length()}
+            WHEN author LIKE CONCAT('%', #{substring}, '%') THEN ${substring.length()}
+            WHEN publisher LIKE CONCAT('%', #{substring}, '%') THEN ${substring.length()}
+            WHEN category LIKE CONCAT('%', #{substring}, '%') THEN ${substring.length()}
+            WHEN description LIKE CONCAT('%', #{substring}, '%') THEN ${substring.length()}
+            ELSE 0
+            END)
+        </foreach>
+        ) AS score
+        FROM book
+        WHERE
+        <foreach collection="substrings" item="substring" separator=" OR ">
+            title LIKE CONCAT('%', #{substring}, '%')
+            OR author LIKE CONCAT('%', #{substring}, '%')
+            OR publisher LIKE CONCAT('%', #{substring}, '%')
+            OR category LIKE CONCAT('%', #{substring}, '%')
+            OR description LIKE CONCAT('%', #{substring}, '%')
+        </foreach>
+        ORDER BY score DESC
+    </select>
+
+    <select id="findByTitle" resultMap="Base_Book_List">
+        SELECT * FROM book WHERE title = #{title}
+    </select>
+
+    <update id="decreaseAvaBooksByTitle">
+        UPDATE book
+        SET ava_books = ava_books - 1, love = love + 1
+        WHERE title = #{title}
+    </update>
+    <select id="findAllBook">
+        SELECT * FROM book
+    </select>
+</mapper>

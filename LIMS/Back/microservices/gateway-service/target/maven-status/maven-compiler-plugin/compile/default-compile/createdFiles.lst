@@ -1,0 +1,4 @@
+com\upc\gateway\filter\JwtAuthenticationFilter$Config.class
+com\upc\gateway\filter\CorsFilter.class
+com\upc\gateway\filter\JwtAuthenticationFilter.class
+com\upc\gateway\GatewayApplication.class

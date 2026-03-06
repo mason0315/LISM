@@ -1,0 +1,5 @@
+com\upc\auth\mapper\AuthMapper.class
+com\upc\auth\controller\AuthController.class
+com\upc\auth\service\impl\AuthServiceImpl.class
+com\upc\auth\AuthServiceApplication.class
+com\upc\auth\service\AuthService.class

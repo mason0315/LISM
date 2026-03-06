@@ -1,0 +1,5 @@
+com\upc\borrow\service\impl\BorrowRecordServiceImpl.class
+com\upc\borrow\service\BorrowRecordService.class
+com\upc\borrow\mapper\BorrowRecordMapper.class
+com\upc\borrow\BorrowServiceApplication.class
+com\upc\borrow\controller\BorrowRecordController.class

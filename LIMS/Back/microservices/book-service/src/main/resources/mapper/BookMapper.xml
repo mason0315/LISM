@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.upc.book.mapper.BookMapper">
+
+    <!-- 根据关键词子串搜索图书 -->
+    <select id="searchBySubstrings" resultType="com.upc.common.entity.Book">
+        SELECT * FROM book_info
+        <where>
+            <foreach collection="substrings" item="substring" open="(" separator="OR" close=")">
+                (title LIKE CONCAT('%', #{substring}, '%')
+                OR author LIKE CONCAT('%', #{substring}, '%')
+                OR publisher LIKE CONCAT('%', #{substring}, '%')
+                OR category LIKE CONCAT('%', #{substring}, '%'))
+            </foreach>
+        </where>
+        ORDER BY love DESC
+    </select>
+
+</mapper>

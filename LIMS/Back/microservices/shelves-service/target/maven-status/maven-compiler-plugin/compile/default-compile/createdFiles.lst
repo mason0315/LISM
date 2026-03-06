@@ -1,0 +1,5 @@
+com\upc\shelves\controller\ShelvesController.class
+com\upc\shelves\mapper\ShelvesMapper.class
+com\upc\shelves\service\impl\ShelvesServiceImpl.class
+com\upc\shelves\ShelvesServiceApplication.class
+com\upc\shelves\service\ShelvesService.class

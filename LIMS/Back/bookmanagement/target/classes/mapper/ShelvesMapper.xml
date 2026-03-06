@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.upc.bookmanagement.mapper.ShelvesMapper">
+
+    <resultMap id="Base_Messages_List" type="com.upc.bookmanagement.entity.Shelves">
+        <id property="title" column="title" />
+        <result property="category" column="category" />
+        <result property="shelveId" column="shelve_id" />
+    </resultMap>
+
+    <sql id="Base_colum">
+        title,shelve_id,category
+    </sql>
+
+
+    <select id="getAllShelves" resultMap="Base_Messages_List">
+        select
+        <include refid="Base_colum"/>
+        from shelves
+    </select>
+
+    <select id="getShelvesById" resultMap="Base_Messages_List">
+        select
+        <include refid="Base_colum"/>
+        from shelves
+        where shelve_id = #{shelveId}
+    </select>
+
+    <select id="getShelvesByTitle" resultMap="Base_Messages_List">
+        select
+        <include refid="Base_colum"/>
+        from shelves
+        where title = #{title}
+    </select>
+
+    <delete id="deleteShelvesByTitle">
+        delete from shelves where title= #{title}
+    </delete>
+
+    <select id="getBooksByShelveId" resultType="string">
+        select title from shelves where shelve_id = #{shelveId}
+    </select>
+
+    <insert id="addBookToShelve">
+        insert into shelves(shelve_id, title, category) values(#{shelveId}, #{title}, #{category})
+    </insert>
+
+    <delete id="removeBookFromShelve">
+        delete from shelves where shelve_id = #{shelveId} and title = #{title}
+    </delete>
+
+    <select id="getAllCategories" resultType="string">
+        select distinct category from shelves
+    </select>
+
+</mapper>

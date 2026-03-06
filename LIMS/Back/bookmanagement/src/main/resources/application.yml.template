@@ -1,0 +1,50 @@
+server:
+  port: 8080
+
+# 数据库配置
+spring:
+  datasource:
+    # MySQL 驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: YOUR_DATABASE_PASSWORD_HERE  # ⚠️ 请替换为你的数据库密码
+    url: jdbc:mysql://localhost:3306/booksmanagement
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+# springdoc-openapi 配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.upc.bookmanagement.controller
+
+# knife4j 配置
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+pagehelper:
+  propertyName: propertyValue
+  reasonable: false
+  defaultCount: true
+
+# 百度 AI 配置
+baidu:
+  ai:
+    api-key: YOUR_BAIDU_AI_API_KEY_HERE      # ⚠️ 请替换为你的百度 AI API Key
+    secret-key: YOUR_BAIDU_AI_SECRET_KEY_HERE  # ⚠️ 请替换为你的百度 AI Secret Key

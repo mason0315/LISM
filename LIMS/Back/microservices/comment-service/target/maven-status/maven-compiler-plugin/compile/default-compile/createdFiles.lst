@@ -1,0 +1,5 @@
+com\upc\comment\mapper\CommentMapper.class
+com\upc\comment\service\impl\CommentServiceImpl.class
+com\upc\comment\CommentServiceApplication.class
+com\upc\comment\controller\CommentController.class
+com\upc\comment\service\CommentService.class

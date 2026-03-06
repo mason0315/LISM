@@ -1,0 +1,17 @@
+com\upc\common\entity\Users.class
+com\upc\common\config\FeignConfig.class
+com\upc\common\entity\Book.class
+com\upc\common\utils\JwtUtil.class
+com\upc\common\result\Result.class
+com\upc\common\entity\Suggestion.class
+com\upc\common\entity\Comment.class
+com\upc\common\feign\UserFeignClient.class
+com\upc\common\entity\Shelves.class
+com\upc\common\feign\BookFeignClient.class
+com\upc\common\config\FeignConfig$1.class
+com\upc\common\entity\ShelvesBook.class
+com\upc\common\entity\FaceFeatures.class
+com\upc\common\utils\UserContext.class
+com\upc\common\entity\UserInfo.class
+com\upc\common\entity\BorrowRecord.class
+com\upc\common\entity\AuthUser.class

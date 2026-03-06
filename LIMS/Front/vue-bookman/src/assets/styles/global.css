@@ -1,0 +1,15 @@
+.el-popper.is-light, .el-popper.is-light>.el-popper__arrow:before {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* 覆盖Element Plus的默认.el-menu样式 */
+.el-menu {
+    background-color: transparent !important;
+    border-right: none !important;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    position: relative;
+}

@@ -1,0 +1,937 @@
+2025-10-22 21:36:25,706 - test_deep_query - INFO - 启动深度查询方法测试
+2025-10-22 21:36:25,707 - test_deep_query - INFO - 初始化Neo4j处理器，连接信息: URI=neo4j://127.0.0.1:7687, USER=neo4j
+2025-10-22 21:36:25,707 - test_deep_query - INFO - Neo4j处理器初始化成功
+2025-10-22 21:36:25,708 - test_deep_query - INFO - === 开始运行所有深度查询方法测试 ===
+2025-10-22 21:36:25,708 - test_deep_query - INFO - 
+=== 开始测试 query_expanded_context 方法 ===
+2025-10-22 21:36:25,709 - test_deep_query - INFO - 
+测试用例 1: 关键词=['红楼梦'], 深度=2
+2025-10-22 21:36:25,710 - neo4j_handler - INFO - 搜索关键词: 红楼梦
+2025-10-22 21:36:25,726 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 21:36:25,735 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 21:36:25,747 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 21:36:25,747 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 2 查询
+2025-10-22 21:36:25,757 - neo4j_handler - INFO - 路径查询找到 45 个关系
+2025-10-22 21:36:25,759 - neo4j_handler - INFO - 扩展查询完成，找到 28 个实体和 45 个关系
+2025-10-22 21:36:25,759 - test_deep_query - INFO - 查询结果: 找到 28 个实体, 45 个关系
+2025-10-22 21:36:25,760 - test_deep_query - INFO - 调试信息: {'initial_nodes': 1, 'initial_ids': ['4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698'], 'entity_count': 28, 'relationship_count': 45}
+2025-10-22 21:36:25,760 - test_deep_query - INFO - 实体示例:
+2025-10-22 21:36:25,761 - test_deep_query - INFO - - 红楼梦 [Book]
+2025-10-22 21:36:25,761 - test_deep_query - INFO - - 人民文学出版社 [Publisher]
+2025-10-22 21:36:25,761 - test_deep_query - INFO - - 百年孤独 [Book]
+2025-10-22 21:36:25,761 - test_deep_query - INFO - 关系示例:
+2025-10-22 21:36:25,761 - test_deep_query - INFO - - PUBLISHES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698
+2025-10-22 21:36:25,761 - test_deep_query - INFO - - PUBLISHES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693
+2025-10-22 21:36:25,762 - test_deep_query - INFO - - PUBLISHES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:708
+2025-10-22 21:36:25,762 - test_deep_query - INFO - 测试用例 1 执行成功
+2025-10-22 21:36:25,762 - test_deep_query - INFO - 
+测试用例 2: 关键词=['百年孤独'], 深度=3
+2025-10-22 21:36:25,762 - neo4j_handler - INFO - 搜索关键词: 百年孤独
+2025-10-22 21:36:25,775 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 21:36:25,785 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 21:36:25,796 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 21:36:25,797 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 3 查询
+2025-10-22 21:36:25,827 - neo4j_handler - INFO - 路径查询找到 101 个关系
+2025-10-22 21:36:25,829 - neo4j_handler - INFO - 扩展查询完成，找到 68 个实体和 101 个关系
+2025-10-22 21:36:25,830 - test_deep_query - INFO - 查询结果: 找到 68 个实体, 101 个关系
+2025-10-22 21:36:25,830 - test_deep_query - INFO - 调试信息: {'initial_nodes': 1, 'initial_ids': ['4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693'], 'entity_count': 68, 'relationship_count': 101}
+2025-10-22 21:36:25,830 - test_deep_query - INFO - 实体示例:
+2025-10-22 21:36:25,830 - test_deep_query - INFO - - 百年孤独 [Book]
+2025-10-22 21:36:25,830 - test_deep_query - INFO - - 加西亚・马尔克斯 [Author]
+2025-10-22 21:36:25,830 - test_deep_query - INFO - - 老舍 [Author]
+2025-10-22 21:36:25,832 - test_deep_query - INFO - 关系示例:
+2025-10-22 21:36:25,832 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693
+2025-10-22 21:36:25,832 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756
+2025-10-22 21:36:25,832 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:104 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756
+2025-10-22 21:36:25,833 - test_deep_query - INFO - 测试用例 2 执行成功
+2025-10-22 21:36:25,833 - test_deep_query - INFO - 
+测试用例 3: 关键词=['骆驼祥子', '老舍'], 深度=2
+2025-10-22 21:36:25,833 - neo4j_handler - INFO - 搜索关键词: 骆驼祥子
+2025-10-22 21:36:25,846 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 21:36:25,854 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 21:36:25,863 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 21:36:25,863 - neo4j_handler - INFO - 搜索关键词: 老舍
+2025-10-22 21:36:25,874 - neo4j_handler - INFO - 查询策略 1 找到 2 个节点
+2025-10-22 21:36:25,888 - neo4j_handler - INFO - 查询策略 2 找到 3 个节点
+2025-10-22 21:36:25,902 - neo4j_handler - INFO - 查询策略 3 找到 3 个节点
+2025-10-22 21:36:25,903 - neo4j_handler - INFO - 找到 4 个初始节点，开始深度 2 查询
+2025-10-22 21:36:25,915 - neo4j_handler - INFO - 路径查询找到 47 个关系
+2025-10-22 21:36:25,916 - neo4j_handler - INFO - 扩展查询完成，找到 30 个实体和 47 个关系
+2025-10-22 21:36:25,917 - test_deep_query - INFO - 查询结果: 找到 30 个实体, 47 个关系
+2025-10-22 21:36:25,917 - test_deep_query - INFO - 调试信息: {'initial_nodes': 4, 'initial_ids': ['4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756', '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103', '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:122', '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:123'], 'entity_count': 30, 'relationship_count': 47}
+2025-10-22 21:36:25,918 - test_deep_query - INFO - 实体示例:
+2025-10-22 21:36:25,918 - test_deep_query - INFO - - 骆驼祥子 [Book]
+2025-10-22 21:36:25,918 - test_deep_query - INFO - - 老舍 [Author]
+2025-10-22 21:36:25,918 - test_deep_query - INFO - - 老舍 [Author]
+2025-10-22 21:36:25,919 - test_deep_query - INFO - 关系示例:
+2025-10-22 21:36:25,919 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756
+2025-10-22 21:36:25,919 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:104 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756
+2025-10-22 21:36:25,920 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:122 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766
+2025-10-22 21:36:25,920 - test_deep_query - INFO - 测试用例 3 执行成功
+2025-10-22 21:36:25,920 - test_deep_query - INFO - 
+=== 开始测试 query_entities_and_relationships 方法 ===
+2025-10-22 21:36:25,921 - test_deep_query - INFO - 
+测试用例 1: 关键词=['红楼梦']
+2025-10-22 21:36:25,957 - neo4j_handler - INFO - Neo4j查询完成，找到 6 个实体和 5 个关系
+2025-10-22 21:36:25,958 - test_deep_query - INFO - 查询结果: 找到 6 个实体, 5 个关系
+2025-10-22 21:36:25,958 - test_deep_query - INFO - 实体示例:
+2025-10-22 21:36:25,958 - test_deep_query - INFO - - 红楼梦 [Book]
+2025-10-22 21:36:25,958 - test_deep_query - INFO - - 曹雪芹 [Author]
+2025-10-22 21:36:25,959 - test_deep_query - INFO - - 周汝昌 [Author]
+2025-10-22 21:36:25,959 - test_deep_query - INFO - 关系示例:
+2025-10-22 21:36:25,959 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698
+2025-10-22 21:36:25,959 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:9 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698
+2025-10-22 21:36:25,959 - test_deep_query - INFO - - PUBLISHES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698
+2025-10-22 21:36:25,960 - test_deep_query - INFO - 测试用例 1 执行成功
+2025-10-22 21:36:25,960 - test_deep_query - INFO - 
+测试用例 2: 关键词=['百年孤独']
+2025-10-22 21:36:25,983 - neo4j_handler - INFO - Neo4j查询完成，找到 6 个实体和 5 个关系
+2025-10-22 21:36:25,984 - test_deep_query - INFO - 查询结果: 找到 6 个实体, 5 个关系
+2025-10-22 21:36:25,984 - test_deep_query - INFO - 实体示例:
+2025-10-22 21:36:25,984 - test_deep_query - INFO - - 百年孤独 [Book]
+2025-10-22 21:36:25,985 - test_deep_query - INFO - - 加西亚・马尔克斯 [Author]
+2025-10-22 21:36:25,985 - test_deep_query - INFO - - 范晔 [Author]
+2025-10-22 21:36:25,985 - test_deep_query - INFO - 关系示例:
+2025-10-22 21:36:25,985 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693
+2025-10-22 21:36:25,986 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:2 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693
+2025-10-22 21:36:25,986 - test_deep_query - INFO - - PUBLISHES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693
+2025-10-22 21:36:25,986 - test_deep_query - INFO - 测试用例 2 执行成功
+2025-10-22 21:36:25,986 - test_deep_query - INFO - 
+测试用例 3: 关键词=['老舍']
+2025-10-22 21:36:26,006 - neo4j_handler - INFO - Neo4j查询完成，找到 5 个实体和 3 个关系
+2025-10-22 21:36:26,006 - test_deep_query - INFO - 查询结果: 找到 5 个实体, 3 个关系
+2025-10-22 21:36:26,006 - test_deep_query - INFO - 实体示例:
+2025-10-22 21:36:26,006 - test_deep_query - INFO - - 老舍 [Author]
+2025-10-22 21:36:26,006 - test_deep_query - INFO - - 老舍 [Author]
+2025-10-22 21:36:26,007 - test_deep_query - INFO - - 老舍研究会 [Author]
+2025-10-22 21:36:26,007 - test_deep_query - INFO - 关系示例:
+2025-10-22 21:36:26,007 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756
+2025-10-22 21:36:26,007 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:122 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766
+2025-10-22 21:36:26,007 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:123 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766
+2025-10-22 21:36:26,008 - test_deep_query - INFO - 测试用例 3 执行成功
+2025-10-22 21:36:26,008 - test_deep_query - INFO - 
+=== 开始测试 comprehensive_neo4j_query_for_mingchao 方法 ===
+2025-10-22 21:36:26,008 - test_deep_query - INFO - 
+测试用例 1: 关键词=['红楼梦'], 深度=2
+2025-10-22 21:36:26,040 - neo4j_handler - INFO - 深度查询完成，共找到 45 个关系
+2025-10-22 21:36:26,085 - neo4j_handler - INFO - 增强查询完成，找到 0 个额外实体
+2025-10-22 21:36:26,097 - neo4j_handler - INFO - 全面查询完成，共找到 28 个实体和 45 个关系
+2025-10-22 21:36:26,098 - test_deep_query - INFO - 查询结果: 找到 28 个实体, 45 个关系, 45 个完整关系
+2025-10-22 21:36:26,099 - test_deep_query - INFO - 实体示例:
+2025-10-22 21:36:26,099 - test_deep_query - INFO - - 小说 [Category]
+2025-10-22 21:36:26,099 - test_deep_query - INFO - - 文学 [Category]
+2025-10-22 21:36:26,099 - test_deep_query - INFO - - 人民文学出版社 [Publisher]
+2025-10-22 21:36:26,100 - test_deep_query - INFO - 完整关系示例:
+2025-10-22 21:36:26,100 - test_deep_query - INFO - - 曹雪芹 -WRITES-> 未知节点
+2025-10-22 21:36:26,101 - test_deep_query - INFO - - 周汝昌 -WRITES-> 未知节点
+2025-10-22 21:36:26,101 - test_deep_query - INFO - - 人民文学出版社 -PUBLISHES-> 未知节点
+2025-10-22 21:36:26,101 - test_deep_query - INFO - 测试用例 1 执行成功
+2025-10-22 21:36:26,101 - test_deep_query - INFO - 
+测试用例 2: 关键词=['百年孤独'], 深度=3
+2025-10-22 21:36:26,230 - neo4j_handler - INFO - 深度查询完成，共找到 101 个关系
+2025-10-22 21:36:26,285 - neo4j_handler - INFO - 增强查询完成，找到 0 个额外实体
+2025-10-22 21:36:26,299 - neo4j_handler - INFO - 全面查询完成，共找到 68 个实体和 101 个关系
+2025-10-22 21:36:26,300 - test_deep_query - INFO - 查询结果: 找到 68 个实体, 101 个关系, 101 个完整关系
+2025-10-22 21:36:26,301 - test_deep_query - INFO - 实体示例:
+2025-10-22 21:36:26,301 - test_deep_query - INFO - - 小说 [Category]
+2025-10-22 21:36:26,302 - test_deep_query - INFO - - 文学 [Category]
+2025-10-22 21:36:26,302 - test_deep_query - INFO - - 老舍研究会 [Author]
+2025-10-22 21:36:26,302 - test_deep_query - INFO - 完整关系示例:
+2025-10-22 21:36:26,302 - test_deep_query - INFO - - 加西亚・马尔克斯 -WRITES-> 未知节点
+2025-10-22 21:36:26,303 - test_deep_query - INFO - - 范晔 -WRITES-> 未知节点
+2025-10-22 21:36:26,303 - test_deep_query - INFO - - 人民文学出版社 -PUBLISHES-> 未知节点
+2025-10-22 21:36:26,303 - test_deep_query - INFO - 测试用例 2 执行成功
+2025-10-22 21:36:26,304 - test_deep_query - INFO - 
+=== 开始测试 generic_neo4j_query 函数 ===
+2025-10-22 21:36:26,304 - test_deep_query - INFO - 
+测试用例 1: 问题='《红楼梦》的作者是谁？', 深度=2
+2025-10-22 21:36:26,305 - app - INFO - 执行通用Neo4j查询，问题: 《红楼梦》的作者是谁？...
+2025-10-22 21:36:26,305 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 21:36:26,306 - app - INFO - [关键词优化] 优化后的有效关键词: ['红楼梦', '红楼梦》的', '作者']
+2025-10-22 21:36:26,307 - app - INFO - [关键词提取] 从问题 '《红楼梦》的作者是谁？...' 中提取的关键词: ['红楼梦', '红楼梦》的', '作者']
+2025-10-22 21:36:26,308 - app - INFO - [关键词详情] 关键词数量: 3, 关键词列表: ['红楼梦', '红楼梦》的', '作者']
+2025-10-22 21:36:26,309 - app - INFO - 使用提取的关键词 '['红楼梦', '红楼梦》的', '作者']' 进行深度为2的查询...
+2025-10-22 21:36:26,309 - app - INFO - 尝试查询策略: 仅关键词查询(深度3)，使用关键词: ['红楼梦', '红楼梦》的', '作者']
+2025-10-22 21:36:26,309 - neo4j_handler - INFO - 搜索关键词: 红楼梦
+2025-10-22 21:36:26,320 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 21:36:26,334 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 21:36:26,347 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 21:36:26,347 - neo4j_handler - INFO - 搜索关键词: 红楼梦》的
+2025-10-22 21:36:26,356 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 21:36:26,366 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 21:36:26,382 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 21:36:26,384 - neo4j_handler - INFO - 搜索关键词: 作者
+2025-10-22 21:36:26,394 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 21:36:26,403 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 21:36:26,415 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 21:36:26,415 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 3 查询
+2025-10-22 21:36:26,436 - neo4j_handler - INFO - 路径查询找到 101 个关系
+2025-10-22 21:36:26,437 - neo4j_handler - INFO - 扩展查询完成，找到 68 个实体和 101 个关系
+2025-10-22 21:36:26,439 - app - INFO - 策略 '仅关键词查询(深度3)' 结果: 68个实体, 101个关系
+2025-10-22 21:36:26,439 - app - INFO - 查询策略 '仅关键词查询(深度3)' 成功执行
+2025-10-22 21:36:26,439 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 21:36:26,441 - app - INFO - 查询到 68 个实体和 101 个关系
+2025-10-22 21:36:26,442 - app - INFO - 实体样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698(Book), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1(Author), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693(Book)
+2025-10-22 21:36:26,442 - app - INFO - 关系样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693, 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756, 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:104 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756
+2025-10-22 21:36:26,443 - app - INFO - 通用Neo4j查询完成，查询策略: 仅关键词查询(深度3), 结果质量: high
+2025-10-22 21:36:26,444 - app - INFO - 返回结果包含 68 个实体和 101 个关系
+2025-10-22 21:36:26,445 - app - INFO - 查询深度: 2, 关键词数量: 3
+2025-10-22 21:36:26,445 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 21:36:26,446 - test_deep_query - INFO - 查询成功状态: True
+2025-10-22 21:36:26,446 - test_deep_query - INFO - 查询结果: 找到 68 个实体, 101 个关系, 0 个完整关系
+2025-10-22 21:36:26,446 - app - INFO - 关系类型统计: []
+2025-10-22 21:36:26,447 - test_deep_query - INFO - 格式化结果:
+### 知识图谱信息 ###
+
+实体: 
+- 实体_unknown [Book]: {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'properties': "{'id': '9787020042474', 'title': '红楼梦', 'isbn':..."}
+- 实体_unknown [Author]: {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1', 'properties': "{'id': '1002', 'nationality': '哥伦比亚', 'name': '..."}
+- 实体_unknown [Book]: {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'properties': "{'id': '9787020165137', 'title': '百年孤独', 'isbn'..."}
+- 实体_unknown [Author]: {'element...
+2025-10-22 21:36:26,448 - test_deep_query - INFO - 测试用例 1 执行成功
+2025-10-22 21:36:26,449 - test_deep_query - INFO - 
+测试用例 2: 问题='与《红楼梦》一家出版社的书有哪些？', 深度=3
+2025-10-22 21:36:26,449 - app - INFO - 执行通用Neo4j查询，问题: 与《红楼梦》一家出版社的书有哪些？...
+2025-10-22 21:36:26,450 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 21:36:26,450 - app - INFO - [关键词优化] 优化后的有效关键词: ['红楼梦', '红楼梦》一家出版社', '书有']
+2025-10-22 21:36:26,451 - app - INFO - [关键词提取] 从问题 '与《红楼梦》一家出版社的书有哪些？...' 中提取的关键词: ['红楼梦', '红楼梦》一家出版社', '书有']
+2025-10-22 21:36:26,451 - app - INFO - [关键词详情] 关键词数量: 3, 关键词列表: ['红楼梦', '红楼梦》一家出版社', '书有']
+2025-10-22 21:36:26,452 - app - INFO - 使用提取的关键词 '['红楼梦', '红楼梦》一家出版社', '书有']' 进行深度为3的查询...
+2025-10-22 21:36:26,452 - app - INFO - 尝试查询策略: 仅关键词查询(深度3)，使用关键词: ['红楼梦', '红楼梦》一家出版社', '书有']
+2025-10-22 21:36:26,453 - neo4j_handler - INFO - 搜索关键词: 红楼梦
+2025-10-22 21:36:26,465 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 21:36:26,472 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 21:36:26,480 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 21:36:26,480 - neo4j_handler - INFO - 搜索关键词: 红楼梦》一家出版社
+2025-10-22 21:36:26,492 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 21:36:26,505 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 21:36:26,557 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 21:36:26,558 - neo4j_handler - INFO - 搜索关键词: 书有
+2025-10-22 21:36:26,570 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 21:36:26,579 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 21:36:26,589 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 21:36:26,589 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 3 查询
+2025-10-22 21:36:26,757 - neo4j_handler - INFO - 路径查询找到 101 个关系
+2025-10-22 21:36:26,758 - neo4j_handler - INFO - 扩展查询完成，找到 68 个实体和 101 个关系
+2025-10-22 21:36:26,759 - app - INFO - 策略 '仅关键词查询(深度3)' 结果: 68个实体, 101个关系
+2025-10-22 21:36:26,760 - app - INFO - 查询策略 '仅关键词查询(深度3)' 成功执行
+2025-10-22 21:36:26,760 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 21:36:26,761 - app - INFO - 查询到 68 个实体和 101 个关系
+2025-10-22 21:36:26,761 - app - INFO - 实体样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698(Book), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1(Author), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693(Book)
+2025-10-22 21:36:26,762 - app - INFO - 关系样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693, 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756, 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:104 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756
+2025-10-22 21:36:26,762 - app - INFO - 通用Neo4j查询完成，查询策略: 仅关键词查询(深度3), 结果质量: high
+2025-10-22 21:36:26,763 - app - INFO - 返回结果包含 68 个实体和 101 个关系
+2025-10-22 21:36:26,763 - app - INFO - 查询深度: 3, 关键词数量: 3
+2025-10-22 21:36:26,763 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 21:36:26,764 - test_deep_query - INFO - 查询成功状态: True
+2025-10-22 21:36:26,764 - test_deep_query - INFO - 查询结果: 找到 68 个实体, 101 个关系, 0 个完整关系
+2025-10-22 21:36:26,764 - app - INFO - 关系类型统计: []
+2025-10-22 21:36:26,766 - test_deep_query - INFO - 格式化结果:
+### 知识图谱信息 ###
+
+实体: 
+- 实体_unknown [Book]: {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'properties': "{'id': '9787020042474', 'title': '红楼梦', 'isbn':..."}
+- 实体_unknown [Author]: {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1', 'properties': "{'id': '1002', 'nationality': '哥伦比亚', 'name': '..."}
+- 实体_unknown [Book]: {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'properties': "{'id': '9787020165137', 'title': '百年孤独', 'isbn'..."}
+- 实体_unknown [Author]: {'element...
+2025-10-22 21:36:26,766 - test_deep_query - INFO - 测试用例 2 执行成功
+2025-10-22 21:36:26,766 - test_deep_query - INFO - 
+测试用例 3: 问题='百年孤独的主要人物有哪些？', 深度=2
+2025-10-22 21:36:26,767 - app - INFO - 执行通用Neo4j查询，问题: 百年孤独的主要人物有哪些？...
+2025-10-22 21:36:26,767 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 21:36:26,768 - app - INFO - [关键词优化] 优化后的有效关键词: ['百年孤独', '主要人物有']
+2025-10-22 21:36:26,768 - app - INFO - [关键词提取] 从问题 '百年孤独的主要人物有哪些？...' 中提取的关键词: ['百年孤独', '主要人物有']
+2025-10-22 21:36:26,769 - app - INFO - [关键词详情] 关键词数量: 2, 关键词列表: ['百年孤独', '主要人物有']
+2025-10-22 21:36:26,769 - app - INFO - 使用提取的关键词 '['百年孤独', '主要人物有']' 进行深度为2的查询...
+2025-10-22 21:36:26,769 - app - INFO - 尝试查询策略: 仅关键词查询(深度3)，使用关键词: ['百年孤独', '主要人物有']
+2025-10-22 21:36:26,770 - neo4j_handler - INFO - 搜索关键词: 百年孤独
+2025-10-22 21:36:26,780 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 21:36:26,785 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 21:36:26,795 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 21:36:26,797 - neo4j_handler - INFO - 搜索关键词: 主要人物有
+2025-10-22 21:36:26,809 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 21:36:26,817 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 21:36:26,826 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 21:36:26,826 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 3 查询
+2025-10-22 21:36:26,906 - neo4j_handler - INFO - 路径查询找到 101 个关系
+2025-10-22 21:36:26,907 - neo4j_handler - INFO - 扩展查询完成，找到 68 个实体和 101 个关系
+2025-10-22 21:36:26,908 - app - INFO - 策略 '仅关键词查询(深度3)' 结果: 68个实体, 101个关系
+2025-10-22 21:36:26,909 - app - INFO - 查询策略 '仅关键词查询(深度3)' 成功执行
+2025-10-22 21:36:26,910 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 21:36:26,910 - app - INFO - 查询到 68 个实体和 101 个关系
+2025-10-22 21:36:26,911 - app - INFO - 实体样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693(Book), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1(Author), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103(Author)
+2025-10-22 21:36:26,911 - app - INFO - 关系样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693, 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756, 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:104 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756
+2025-10-22 21:36:26,912 - app - INFO - 通用Neo4j查询完成，查询策略: 仅关键词查询(深度3), 结果质量: high
+2025-10-22 21:36:26,912 - app - INFO - 返回结果包含 68 个实体和 101 个关系
+2025-10-22 21:36:26,912 - app - INFO - 查询深度: 2, 关键词数量: 2
+2025-10-22 21:36:26,913 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 21:36:26,913 - test_deep_query - INFO - 查询成功状态: True
+2025-10-22 21:36:26,914 - test_deep_query - INFO - 查询结果: 找到 68 个实体, 101 个关系, 0 个完整关系
+2025-10-22 21:36:26,915 - app - INFO - 关系类型统计: []
+2025-10-22 21:36:26,916 - test_deep_query - INFO - 格式化结果:
+### 知识图谱信息 ###
+
+实体: 
+- 实体_unknown [Book]: {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'properties': "{'id': '9787020165137', 'title': '百年孤独', 'isbn'..."}
+- 实体_unknown [Author]: {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1', 'properties': "{'id': '1002', 'nationality': '哥伦比亚', 'name': '..."}
+- 实体_unknown [Author]: {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103', 'properties': "{'id': '1104', 'nationality': '中国', 'name': '老舍'}"}
+- 实体_unknown [Book]: {'elementI...
+2025-10-22 21:36:26,916 - test_deep_query - INFO - 测试用例 3 执行成功
+2025-10-22 21:36:26,916 - test_deep_query - INFO - 
+=== 开始测试特定关系查询 ===
+2025-10-22 21:36:26,916 - test_deep_query - INFO - 
+测试用例 1: 问题='与《红楼梦》同一出版社的书有哪些？'
+2025-10-22 21:36:26,917 - app - INFO - 执行通用Neo4j查询，问题: 与《红楼梦》同一出版社的书有哪些？...
+2025-10-22 21:36:26,917 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 21:36:26,918 - app - INFO - [关键词优化] 优化后的有效关键词: ['红楼梦', '红楼梦》同一出版社', '书有']
+2025-10-22 21:36:26,918 - app - INFO - [关键词提取] 从问题 '与《红楼梦》同一出版社的书有哪些？...' 中提取的关键词: ['红楼梦', '红楼梦》同一出版社', '书有']
+2025-10-22 21:36:26,918 - app - INFO - [关键词详情] 关键词数量: 3, 关键词列表: ['红楼梦', '红楼梦》同一出版社', '书有']
+2025-10-22 21:36:26,919 - app - INFO - 使用提取的关键词 '['红楼梦', '红楼梦》同一出版社', '书有']' 进行深度为3的查询...
+2025-10-22 21:36:26,919 - app - INFO - 检测到特定关系查询模式，优先使用comprehensive_neo4j_query_for_mingchao
+2025-10-22 21:36:26,920 - app - INFO - 尝试查询策略: 综合增强查询，使用关键词: ['红楼梦', '红楼梦》同一出版社', '书有']
+2025-10-22 21:36:26,949 - neo4j_handler - INFO - 深度查询完成，共找到 45 个关系
+2025-10-22 21:36:27,041 - neo4j_handler - INFO - 增强查询完成，找到 0 个额外实体
+2025-10-22 21:36:27,045 - neo4j_handler - INFO - 全面查询完成，共找到 28 个实体和 45 个关系
+2025-10-22 21:36:27,046 - app - INFO - 策略 '综合增强查询' 结果: 28个实体, 45个关系
+2025-10-22 21:36:27,046 - app - INFO - 查询策略 '综合增强查询' 成功执行
+2025-10-22 21:36:27,046 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 21:36:27,047 - app - INFO - 查询到 28 个实体和 0 个关系
+2025-10-22 21:36:27,047 - app - INFO - 实体样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599(Category), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598(Category), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536(Publisher)
+2025-10-22 21:36:27,048 - app - INFO - 通用Neo4j查询完成，查询策略: 综合增强查询, 结果质量: medium
+2025-10-22 21:36:27,049 - app - INFO - 返回结果包含 28 个实体和 0 个关系
+2025-10-22 21:36:27,050 - app - INFO - 查询深度: 3, 关键词数量: 3
+2025-10-22 21:36:27,050 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 21:36:27,050 - test_deep_query - INFO - 查询成功状态: True
+2025-10-22 21:36:27,051 - test_deep_query - INFO - 查询结果: 找到 28 个实体, 0 个关系
+2025-10-22 21:36:27,051 - test_deep_query - INFO - 找到 0 个出版社实体, 0 个出版关系
+2025-10-22 21:36:27,051 - test_deep_query - INFO - 测试用例 1 执行成功
+2025-10-22 21:36:27,051 - test_deep_query - INFO - 
+测试用例 2: 问题='《百年孤独》和哪些书是同一个出版社出版的？'
+2025-10-22 21:36:27,052 - app - INFO - 执行通用Neo4j查询，问题: 《百年孤独》和哪些书是同一个出版社出版的？...
+2025-10-22 21:36:27,052 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 21:36:27,053 - app - INFO - [关键词优化] 优化后的有效关键词: ['百年孤独', '出版社出版']
+2025-10-22 21:36:27,053 - app - INFO - [关键词提取] 从问题 '《百年孤独》和哪些书是同一个出版社出版的...' 中提取的关键词: ['百年孤独', '出版社出版']
+2025-10-22 21:36:27,053 - app - INFO - [关键词详情] 关键词数量: 2, 关键词列表: ['百年孤独', '出版社出版']
+2025-10-22 21:36:27,054 - app - INFO - 使用提取的关键词 '['百年孤独', '出版社出版']' 进行深度为3的查询...
+2025-10-22 21:36:27,054 - app - INFO - 尝试查询策略: 仅关键词查询(深度3)，使用关键词: ['百年孤独', '出版社出版']
+2025-10-22 21:36:27,054 - neo4j_handler - INFO - 搜索关键词: 百年孤独
+2025-10-22 21:36:27,067 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 21:36:27,073 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 21:36:27,083 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 21:36:27,083 - neo4j_handler - INFO - 搜索关键词: 出版社出版
+2025-10-22 21:36:27,087 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 21:36:27,094 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 21:36:27,110 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 21:36:27,111 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 3 查询
+2025-10-22 21:36:27,128 - neo4j_handler - INFO - 路径查询找到 101 个关系
+2025-10-22 21:36:27,129 - neo4j_handler - INFO - 扩展查询完成，找到 68 个实体和 101 个关系
+2025-10-22 21:36:27,131 - app - INFO - 策略 '仅关键词查询(深度3)' 结果: 68个实体, 101个关系
+2025-10-22 21:36:27,132 - app - INFO - 查询策略 '仅关键词查询(深度3)' 成功执行
+2025-10-22 21:36:27,132 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 21:36:27,132 - app - INFO - 查询到 68 个实体和 101 个关系
+2025-10-22 21:36:27,133 - app - INFO - 实体样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693(Book), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1(Author), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103(Author)
+2025-10-22 21:36:27,133 - app - INFO - 关系样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693, 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756, 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:104 -WRITES-> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756
+2025-10-22 21:36:27,134 - app - INFO - 通用Neo4j查询完成，查询策略: 仅关键词查询(深度3), 结果质量: high
+2025-10-22 21:36:27,134 - app - INFO - 返回结果包含 68 个实体和 101 个关系
+2025-10-22 21:36:27,134 - app - INFO - 查询深度: 3, 关键词数量: 2
+2025-10-22 21:36:27,136 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 21:36:27,137 - test_deep_query - INFO - 查询成功状态: True
+2025-10-22 21:36:27,137 - test_deep_query - INFO - 查询结果: 找到 68 个实体, 101 个关系
+2025-10-22 21:36:27,138 - test_deep_query - INFO - 找到 0 个出版社实体, 0 个出版关系
+2025-10-22 21:36:27,138 - test_deep_query - INFO - 测试用例 2 执行成功
+2025-10-22 21:36:27,138 - test_deep_query - INFO - 
+测试用例 3: 问题='找出与《骆驼祥子》同出版社的作品'
+2025-10-22 21:36:27,138 - app - INFO - 执行通用Neo4j查询，问题: 找出与《骆驼祥子》同出版社的作品...
+2025-10-22 21:36:27,138 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 21:36:27,139 - app - INFO - [关键词优化] 优化后的有效关键词: ['骆驼祥子', '找出与《骆驼祥子》同出版社的', '找出', '骆驼祥子》同出版社', '作品']
+2025-10-22 21:36:27,139 - app - INFO - [关键词提取] 从问题 '找出与《骆驼祥子》同出版社的作品...' 中提取的关键词: ['骆驼祥子', '找出与《骆驼祥子》同出版社的', '找出', '骆驼祥子》同出版社', '作品']
+2025-10-22 21:36:27,139 - app - INFO - [关键词详情] 关键词数量: 5, 关键词列表: ['骆驼祥子', '找出与《骆驼祥子》同出版社的', '找出', '骆驼祥子》同出版社', '作品']
+2025-10-22 21:36:27,139 - app - INFO - 使用提取的关键词 '['骆驼祥子', '找出与《骆驼祥子》同出版社的', '找出', '骆驼祥子》同出版社', '作品']' 进行深度为3的查询...
+2025-10-22 21:36:27,140 - app - INFO - 检测到特定关系查询模式，优先使用comprehensive_neo4j_query_for_mingchao
+2025-10-22 21:36:27,140 - app - INFO - 尝试查询策略: 综合增强查询，使用关键词: ['骆驼祥子', '找出与《骆驼祥子》同出版社的', '找出', '骆驼祥子》同出版社', '作品']
+2025-10-22 21:36:27,198 - neo4j_handler - INFO - 深度查询完成，共找到 45 个关系
+2025-10-22 21:36:27,267 - neo4j_handler - INFO - 增强查询完成，找到 0 个额外实体
+2025-10-22 21:36:27,272 - neo4j_handler - INFO - 全面查询完成，共找到 28 个实体和 45 个关系
+2025-10-22 21:36:27,272 - app - INFO - 策略 '综合增强查询' 结果: 28个实体, 45个关系
+2025-10-22 21:36:27,273 - app - INFO - 查询策略 '综合增强查询' 成功执行
+2025-10-22 21:36:27,273 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 21:36:27,274 - app - INFO - 查询到 28 个实体和 0 个关系
+2025-10-22 21:36:27,274 - app - INFO - 实体样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599(Category), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598(Category), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536(Publisher)
+2025-10-22 21:36:27,274 - app - INFO - 通用Neo4j查询完成，查询策略: 综合增强查询, 结果质量: medium
+2025-10-22 21:36:27,276 - app - INFO - 返回结果包含 28 个实体和 0 个关系
+2025-10-22 21:36:27,276 - app - INFO - 查询深度: 3, 关键词数量: 5
+2025-10-22 21:36:27,276 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 21:36:27,276 - test_deep_query - INFO - 查询成功状态: True
+2025-10-22 21:36:27,276 - test_deep_query - INFO - 查询结果: 找到 28 个实体, 0 个关系
+2025-10-22 21:36:27,277 - test_deep_query - INFO - 找到 0 个出版社实体, 0 个出版关系
+2025-10-22 21:36:27,277 - test_deep_query - INFO - 测试用例 3 执行成功
+2025-10-22 21:36:27,277 - test_deep_query - INFO - 
+=== 所有测试执行完成 ===
+2025-10-22 21:36:27,278 - neo4j_handler - INFO - 已关闭Neo4j数据库连接
+2025-10-22 21:36:27,278 - test_deep_query - INFO - 已关闭Neo4j连接
+2025-10-22 21:36:27,278 - test_deep_query - INFO - 深度查询方法测试结束
+2025-10-22 22:31:07,449 - test_deep_query - INFO - 启动深度查询方法测试
+2025-10-22 22:31:07,450 - test_deep_query - INFO - 初始化Neo4j处理器，连接信息: URI=neo4j://127.0.0.1:7687, USER=neo4j
+2025-10-22 22:31:07,450 - test_deep_query - INFO - Neo4j处理器初始化成功
+2025-10-22 22:31:07,450 - test_deep_query - INFO - === 开始运行所有深度查询方法测试 ===
+2025-10-22 22:31:07,451 - test_deep_query - INFO - 
+=== 开始测试 query_expanded_context 方法 ===
+2025-10-22 22:31:07,451 - test_deep_query - INFO - 
+测试用例 1: 关键词=['红楼梦'], 深度=2
+2025-10-22 22:31:07,451 - neo4j_handler - INFO - 搜索关键词: 红楼梦
+2025-10-22 22:31:07,530 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,531 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,531 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 22:31:07,586 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,587 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,588 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 22:31:07,637 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 22:31:07,638 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 2 查询
+2025-10-22 22:31:07,693 - neo4j_handler - INFO - 深度 1 查询找到 5 个关系
+2025-10-22 22:31:07,778 - neo4j_handler - WARNING - 深度 2 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:07,779 - neo4j_handler - INFO - 扩展查询完成，找到 6 个实体和 5 个关系
+2025-10-22 22:31:07,779 - test_deep_query - INFO - 查询结果: 找到 6 个实体, 5 个关系
+2025-10-22 22:31:07,779 - test_deep_query - INFO - 调试信息: {'initial_nodes': 1, 'initial_ids': ['4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698'], 'entity_count': 6, 'relationship_count': 5, 'all_relationships_count': 5}
+2025-10-22 22:31:07,779 - test_deep_query - INFO - 实体示例:
+2025-10-22 22:31:07,779 - test_deep_query - INFO - - 红楼梦 [Book]
+2025-10-22 22:31:07,779 - test_deep_query - INFO - - 曹雪芹 [Author]
+2025-10-22 22:31:07,779 - test_deep_query - INFO - - 周汝昌 [Author]
+2025-10-22 22:31:07,781 - test_deep_query - INFO - 关系示例:
+2025-10-22 22:31:07,781 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8
+2025-10-22 22:31:07,781 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:9
+2025-10-22 22:31:07,781 - test_deep_query - INFO - - PUBLISHES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536
+2025-10-22 22:31:07,782 - test_deep_query - INFO - 测试用例 1 执行成功
+2025-10-22 22:31:07,782 - test_deep_query - INFO - 
+测试用例 2: 关键词=['百年孤独'], 深度=3
+2025-10-22 22:31:07,782 - neo4j_handler - INFO - 搜索关键词: 百年孤独
+2025-10-22 22:31:07,792 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,793 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,793 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 22:31:07,800 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,800 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,801 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 22:31:07,808 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 22:31:07,809 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 3 查询
+2025-10-22 22:31:07,823 - neo4j_handler - INFO - 深度 1 查询找到 5 个关系
+2025-10-22 22:31:07,835 - neo4j_handler - WARNING - 深度 2 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:07,843 - neo4j_handler - WARNING - 深度 3 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:07,843 - neo4j_handler - INFO - 扩展查询完成，找到 6 个实体和 5 个关系
+2025-10-22 22:31:07,843 - test_deep_query - INFO - 查询结果: 找到 6 个实体, 5 个关系
+2025-10-22 22:31:07,843 - test_deep_query - INFO - 调试信息: {'initial_nodes': 1, 'initial_ids': ['4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693'], 'entity_count': 6, 'relationship_count': 5, 'all_relationships_count': 5}
+2025-10-22 22:31:07,843 - test_deep_query - INFO - 实体示例:
+2025-10-22 22:31:07,843 - test_deep_query - INFO - - 百年孤独 [Book]
+2025-10-22 22:31:07,843 - test_deep_query - INFO - - 加西亚・马尔克斯 [Author]
+2025-10-22 22:31:07,843 - test_deep_query - INFO - - 范晔 [Author]
+2025-10-22 22:31:07,844 - test_deep_query - INFO - 关系示例:
+2025-10-22 22:31:07,844 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1
+2025-10-22 22:31:07,844 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:2
+2025-10-22 22:31:07,844 - test_deep_query - INFO - - PUBLISHES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536
+2025-10-22 22:31:07,844 - test_deep_query - INFO - 测试用例 2 执行成功
+2025-10-22 22:31:07,844 - test_deep_query - INFO - 
+测试用例 3: 关键词=['骆驼祥子', '老舍'], 深度=2
+2025-10-22 22:31:07,844 - neo4j_handler - INFO - 搜索关键词: 骆驼祥子
+2025-10-22 22:31:07,851 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,851 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,851 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 22:31:07,861 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,862 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,862 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 22:31:07,868 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 22:31:07,869 - neo4j_handler - INFO - 搜索关键词: 老舍
+2025-10-22 22:31:07,875 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,875 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,875 - neo4j_handler - INFO - 查询策略 1 找到 2 个节点
+2025-10-22 22:31:07,880 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,880 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:07,881 - neo4j_handler - INFO - 查询策略 2 找到 3 个节点
+2025-10-22 22:31:07,893 - neo4j_handler - INFO - 查询策略 3 找到 3 个节点
+2025-10-22 22:31:07,894 - neo4j_handler - INFO - 找到 4 个初始节点，开始深度 2 查询
+2025-10-22 22:31:07,957 - neo4j_handler - ERROR - Neo4j扩展查询失败: Existing exports of data: object cannot be re-sized
+2025-10-22 22:31:08,004 - neo4j_handler - ERROR - 错误堆栈: Traceback (most recent call last):
+  File "C:\Users\Hzy\Desktop\向量数据库和知识图谱\LIMS 作品源码\LIMS 作品源码\Back(python)\neo4j_handler.py", line 321, in query_expanded_context
+    relationships = session.run(query, initial_ids=all_initial_ids).data()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\neo4j\_sync\work\session.py", line 330, in run
+    self._auto_result._run(
+  File "D:\python\Lib\site-packages\neo4j\_sync\work\result.py", line 236, in _run
+    self._attach()
+  File "D:\python\Lib\site-packages\neo4j\_sync\work\result.py", line 430, in _attach
+    self._connection.fetch_message()
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_common.py", line 193, in inner
+    func(*args, **kwargs)
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_bolt.py", line 860, in fetch_message
+    tag, fields = self.inbox.pop(
+                  ^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_common.py", line 77, in pop
+    self._buffer_one_chunk()
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_common.py", line 54, in _buffer_one_chunk
+    receive_into_buffer(self._socket, self._buffer, 2)
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_common.py", line 354, in receive_into_buffer
+    n = sock.recv_into(
+        ^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\neo4j\_async_compat\network\_bolt_socket.py", line 364, in recv_into
+    return self._wait_for_io(self._socket.recv_into, buffer, nbytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\neo4j\_async_compat\network\_bolt_socket.py", line 339, in _wait_for_io
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\Lib\site-packages\neo4j\_sync\work\session.py", line 224, in close
+    self._connection.fetch_all()
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_bolt.py", line 878, in fetch_all
+    detail_delta, summary_delta = self.fetch_message()
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_bolt.py", line 860, in fetch_message
+    tag, fields = self.inbox.pop(
+                  ^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_common.py", line 77, in pop
+    self._buffer_one_chunk()
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_common.py", line 59, in _buffer_one_chunk
+    receive_into_buffer(
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_common.py", line 351, in receive_into_buffer
+    buffer.data += bytearray(end - len(buffer.data))
+BufferError: Existing exports of data: object cannot be re-sized
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hzy\Desktop\向量数据库和知识图谱\LIMS 作品源码\LIMS 作品源码\Back(python)\neo4j_handler.py", line 211, in query_expanded_context
+    with self.driver.session() as session:
+  File "D:\python\Lib\site-packages\neo4j\_sync\work\session.py", line 130, in __exit__
+    self.close()
+  File "D:\python\Lib\site-packages\neo4j\_sync\work\session.py", line 235, in close
+    self._disconnect()
+  File "D:\python\Lib\site-packages\neo4j\_sync\work\session.py", line 145, in _disconnect
+    return super()._disconnect(sync=sync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\neo4j\_sync\work\workspace.py", line 298, in _disconnect
+    self._pool.release(self._connection)
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_pool.py", line 494, in release
+    connection.reset()
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_bolt5.py", line 447, in reset
+    self.fetch_all()
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_bolt.py", line 878, in fetch_all
+    detail_delta, summary_delta = self.fetch_message()
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_bolt.py", line 860, in fetch_message
+    tag, fields = self.inbox.pop(
+                  ^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_common.py", line 77, in pop
+    self._buffer_one_chunk()
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_common.py", line 59, in _buffer_one_chunk
+    receive_into_buffer(
+  File "D:\python\Lib\site-packages\neo4j\_sync\io\_common.py", line 351, in receive_into_buffer
+    buffer.data += bytearray(end - len(buffer.data))
+BufferError: Existing exports of data: object cannot be re-sized
+
+2025-10-22 22:31:08,005 - test_deep_query - INFO - 查询结果: 找到 0 个实体, 0 个关系
+2025-10-22 22:31:08,005 - test_deep_query - INFO - 调试信息: {'initial_nodes': 4, 'initial_ids': ['4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756', '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103', '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:122', '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:123'], 'error': 'Existing exports of data: object cannot be re-sized'}
+2025-10-22 22:31:08,005 - test_deep_query - INFO - 测试用例 3 执行成功
+2025-10-22 22:31:08,005 - test_deep_query - INFO - 
+=== 开始测试 query_entities_and_relationships 方法 ===
+2025-10-22 22:31:08,005 - test_deep_query - INFO - 
+测试用例 1: 关键词=['红楼梦']
+2025-10-22 22:31:08,045 - neo4j_handler - INFO - Neo4j查询完成，找到 6 个实体和 5 个关系
+2025-10-22 22:31:08,046 - test_deep_query - INFO - 查询结果: 找到 6 个实体, 5 个关系
+2025-10-22 22:31:08,046 - test_deep_query - INFO - 实体示例:
+2025-10-22 22:31:08,047 - test_deep_query - INFO - - 红楼梦 [Book]
+2025-10-22 22:31:08,047 - test_deep_query - INFO - - 曹雪芹 [Author]
+2025-10-22 22:31:08,047 - test_deep_query - INFO - - 周汝昌 [Author]
+2025-10-22 22:31:08,047 - test_deep_query - INFO - 关系示例:
+2025-10-22 22:31:08,047 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698
+2025-10-22 22:31:08,048 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:9 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698
+2025-10-22 22:31:08,048 - test_deep_query - INFO - - PUBLISHES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698
+2025-10-22 22:31:08,048 - test_deep_query - INFO - 测试用例 1 执行成功
+2025-10-22 22:31:08,048 - test_deep_query - INFO - 
+测试用例 2: 关键词=['百年孤独']
+2025-10-22 22:31:08,071 - neo4j_handler - INFO - Neo4j查询完成，找到 6 个实体和 5 个关系
+2025-10-22 22:31:08,072 - test_deep_query - INFO - 查询结果: 找到 6 个实体, 5 个关系
+2025-10-22 22:31:08,072 - test_deep_query - INFO - 实体示例:
+2025-10-22 22:31:08,072 - test_deep_query - INFO - - 百年孤独 [Book]
+2025-10-22 22:31:08,073 - test_deep_query - INFO - - 加西亚・马尔克斯 [Author]
+2025-10-22 22:31:08,073 - test_deep_query - INFO - - 范晔 [Author]
+2025-10-22 22:31:08,073 - test_deep_query - INFO - 关系示例:
+2025-10-22 22:31:08,073 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693
+2025-10-22 22:31:08,074 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:2 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693
+2025-10-22 22:31:08,074 - test_deep_query - INFO - - PUBLISHES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693
+2025-10-22 22:31:08,074 - test_deep_query - INFO - 测试用例 2 执行成功
+2025-10-22 22:31:08,074 - test_deep_query - INFO - 
+测试用例 3: 关键词=['老舍']
+2025-10-22 22:31:08,103 - neo4j_handler - INFO - Neo4j查询完成，找到 5 个实体和 3 个关系
+2025-10-22 22:31:08,103 - test_deep_query - INFO - 查询结果: 找到 5 个实体, 3 个关系
+2025-10-22 22:31:08,104 - test_deep_query - INFO - 实体示例:
+2025-10-22 22:31:08,104 - test_deep_query - INFO - - 老舍 [Author]
+2025-10-22 22:31:08,104 - test_deep_query - INFO - - 老舍 [Author]
+2025-10-22 22:31:08,105 - test_deep_query - INFO - - 老舍研究会 [Author]
+2025-10-22 22:31:08,105 - test_deep_query - INFO - 关系示例:
+2025-10-22 22:31:08,105 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756
+2025-10-22 22:31:08,105 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:122 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766
+2025-10-22 22:31:08,105 - test_deep_query - INFO - - WRITES: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:123 -> 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766
+2025-10-22 22:31:08,106 - test_deep_query - INFO - 测试用例 3 执行成功
+2025-10-22 22:31:08,106 - test_deep_query - INFO - 
+=== 开始测试 comprehensive_neo4j_query_for_mingchao 方法 ===
+2025-10-22 22:31:08,106 - test_deep_query - INFO - 
+测试用例 1: 关键词=['红楼梦'], 深度=2
+2025-10-22 22:31:08,121 - neo4j_handler - INFO - 深度查询完成，共找到 45 个关系
+2025-10-22 22:31:08,161 - neo4j_handler - INFO - 增强查询完成，找到 0 个额外实体
+2025-10-22 22:31:08,166 - neo4j_handler - INFO - 全面查询完成，共找到 28 个实体和 45 个关系
+2025-10-22 22:31:08,166 - test_deep_query - INFO - 查询结果: 找到 28 个实体, 45 个关系, 45 个完整关系
+2025-10-22 22:31:08,167 - test_deep_query - INFO - 实体示例:
+2025-10-22 22:31:08,167 - test_deep_query - INFO - - 青铜葵花 [Book]
+2025-10-22 22:31:08,167 - test_deep_query - INFO - - 绿山墙的安妮 [Book]
+2025-10-22 22:31:08,167 - test_deep_query - INFO - - 楚辞选注 [Book]
+2025-10-22 22:31:08,168 - test_deep_query - INFO - 完整关系示例:
+2025-10-22 22:31:08,168 - test_deep_query - INFO - - 曹雪芹 -WRITES-> 未知节点
+2025-10-22 22:31:08,168 - test_deep_query - INFO - - 周汝昌 -WRITES-> 未知节点
+2025-10-22 22:31:08,169 - test_deep_query - INFO - - 人民文学出版社 -PUBLISHES-> 未知节点
+2025-10-22 22:31:08,169 - test_deep_query - INFO - 测试用例 1 执行成功
+2025-10-22 22:31:08,169 - test_deep_query - INFO - 
+测试用例 2: 关键词=['百年孤独'], 深度=3
+2025-10-22 22:31:08,197 - neo4j_handler - INFO - 深度查询完成，共找到 101 个关系
+2025-10-22 22:31:08,238 - neo4j_handler - INFO - 增强查询完成，找到 0 个额外实体
+2025-10-22 22:31:08,250 - neo4j_handler - INFO - 全面查询完成，共找到 68 个实体和 101 个关系
+2025-10-22 22:31:08,250 - test_deep_query - INFO - 查询结果: 找到 68 个实体, 101 个关系, 101 个完整关系
+2025-10-22 22:31:08,250 - test_deep_query - INFO - 实体示例:
+2025-10-22 22:31:08,250 - test_deep_query - INFO - - 青铜葵花 [Book]
+2025-10-22 22:31:08,251 - test_deep_query - INFO - - 绿山墙的安妮 [Book]
+2025-10-22 22:31:08,251 - test_deep_query - INFO - - 曹文轩 [Author]
+2025-10-22 22:31:08,251 - test_deep_query - INFO - 完整关系示例:
+2025-10-22 22:31:08,251 - test_deep_query - INFO - - 加西亚・马尔克斯 -WRITES-> 未知节点
+2025-10-22 22:31:08,251 - test_deep_query - INFO - - 范晔 -WRITES-> 未知节点
+2025-10-22 22:31:08,251 - test_deep_query - INFO - - 人民文学出版社 -PUBLISHES-> 未知节点
+2025-10-22 22:31:08,251 - test_deep_query - INFO - 测试用例 2 执行成功
+2025-10-22 22:31:08,252 - test_deep_query - INFO - 
+=== 开始测试 generic_neo4j_query 函数 ===
+2025-10-22 22:31:08,252 - test_deep_query - INFO - 
+测试用例 1: 问题='《红楼梦》的作者是谁？', 深度=2
+2025-10-22 22:31:08,252 - app - INFO - 执行通用Neo4j查询，问题: 《红楼梦》的作者是谁？...
+2025-10-22 22:31:08,252 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 22:31:08,253 - app - INFO - [关键词优化] 优化后的有效关键词: ['红楼梦', '红楼梦》的', '作者']
+2025-10-22 22:31:08,254 - app - INFO - [关键词提取] 从问题 '《红楼梦》的作者是谁？...' 中提取的关键词: ['红楼梦', '红楼梦》的', '作者']
+2025-10-22 22:31:08,254 - app - INFO - [关键词详情] 关键词数量: 3, 关键词列表: ['红楼梦', '红楼梦》的', '作者']
+2025-10-22 22:31:08,254 - app - INFO - 使用提取的关键词 '['红楼梦', '红楼梦》的', '作者']' 进行深度为2的查询...
+2025-10-22 22:31:08,255 - app - INFO - 尝试查询策略: 扩展上下文查询(深度3)，使用关键词: ['红楼梦', '红楼梦》的', '作者']
+2025-10-22 22:31:08,255 - neo4j_handler - INFO - 搜索关键词: 红楼梦
+2025-10-22 22:31:08,271 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,272 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,273 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 22:31:08,281 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,282 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,282 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 22:31:08,290 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 22:31:08,290 - neo4j_handler - INFO - 搜索关键词: 红楼梦》的
+2025-10-22 22:31:08,296 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,298 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,298 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 22:31:08,312 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,313 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,313 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 22:31:08,321 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 22:31:08,322 - neo4j_handler - INFO - 搜索关键词: 作者
+2025-10-22 22:31:08,328 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,328 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,328 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 22:31:08,335 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,335 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,335 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 22:31:08,350 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 22:31:08,350 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 3 查询
+2025-10-22 22:31:08,359 - neo4j_handler - INFO - 深度 1 查询找到 5 个关系
+2025-10-22 22:31:08,366 - neo4j_handler - WARNING - 深度 2 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:08,373 - neo4j_handler - WARNING - 深度 3 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:08,373 - neo4j_handler - INFO - 扩展查询完成，找到 6 个实体和 5 个关系
+2025-10-22 22:31:08,373 - app - INFO - 策略 '扩展上下文查询(深度3)' 结果: 6个实体, 5个关系
+2025-10-22 22:31:08,374 - app - INFO - 查询策略 '扩展上下文查询(深度3)' 成功执行
+2025-10-22 22:31:08,374 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 22:31:08,374 - app - INFO - 原始关系数据: [{'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8', 'properties': {}}, {'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:9', 'properties': {}}, {'type': 'PUBLISHES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'properties': {}}, {'type': 'BELONGS_TO', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'properties': {}}, {'type': 'BELONGS_TO', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'properties': {}}]
+2025-10-22 22:31:08,375 - app - INFO - 完整关系数据: [{'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846984', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8', 'labels': ['Author'], 'properties': {'id': '1009', 'nationality': '中国', 'name': '曹雪芹'}}, 'properties': {}, 'source': '红楼梦', 'target': '曹雪芹'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846985', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:9', 'labels': ['Author'], 'properties': {'id': '1010', 'nationality': '中国', 'name': '周汝昌'}}, 'properties': {}, 'source': '红楼梦', 'target': '周汝昌'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155174403932160536', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'properties': {}, 'source': '红楼梦', 'target': '人民文学出版社'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103226', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}, 'source': '红楼梦', 'target': '文学'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788474', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}, 'source': '红楼梦', 'target': '小说'}]
+2025-10-22 22:31:08,376 - app - INFO - 关系数据类型: <class 'list'>
+2025-10-22 22:31:08,376 - app - INFO - 关系样本结构: ['type', 'start_node', 'end_node', 'properties']
+2025-10-22 22:31:08,376 - app - INFO - 关系样本内容: {'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8', 'properties': {}}
+2025-10-22 22:31:08,376 - app - INFO - 查询到 6 个实体和 5 个关系
+2025-10-22 22:31:08,377 - app - INFO - 实体样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698(Book), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8(Author), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:9(Author)
+2025-10-22 22:31:08,377 - app - INFO - 关系样本: 红楼梦 -WRITES-> 曹雪芹, 红楼梦 -WRITES-> 周汝昌, 红楼梦 -PUBLISHES-> 人民文学出版社
+2025-10-22 22:31:08,377 - app - INFO - 通用Neo4j查询完成，查询策略: 扩展上下文查询(深度3), 结果质量: high
+2025-10-22 22:31:08,377 - app - INFO - 返回结果包含 6 个实体和 5 个关系
+2025-10-22 22:31:08,377 - app - INFO - 查询深度: 2, 关键词数量: 3
+2025-10-22 22:31:08,378 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 22:31:08,378 - test_deep_query - INFO - 查询成功状态: True
+2025-10-22 22:31:08,378 - test_deep_query - INFO - 查询结果: 找到 6 个实体, 5 个关系, 5 个完整关系
+2025-10-22 22:31:08,378 - app - INFO - 关系类型统计: [('WRITES', 2), ('BELONGS_TO', 2), ('PUBLISHES', 1)]
+2025-10-22 22:31:08,379 - test_deep_query - INFO - 格式化结果:
+### 知识图谱信息 ###
+
+实体: 
+- 实体_unknown [Book]: {'properties': "{'id': '9787020042474', 'title': '红楼梦', 'isbn':..."}
+- 实体_unknown [Author]: {'properties': "{'id': '1009', 'nationality': '中国', 'name': '曹雪芹'}"}
+- 实体_unknown [Author]: {'properties': "{'id': '1010', 'nationality': '中国', 'name': '周汝昌'}"}
+- 实体_unknown [Publisher]: {'properties': "{'id': 'P002', 'name': '人民文学出版社'}"}
+- 实体_unknown [Category]: {'properties': "{'id': 'C008', 'name': '文学'}"}
+- 实体_unknown [Category]: {'properties': "{'id': 'C009',...
+2025-10-22 22:31:08,379 - test_deep_query - INFO - 测试用例 1 执行成功
+2025-10-22 22:31:08,379 - test_deep_query - INFO - 
+测试用例 2: 问题='与《红楼梦》一家出版社的书有哪些？', 深度=3
+2025-10-22 22:31:08,380 - app - INFO - 执行通用Neo4j查询，问题: 与《红楼梦》一家出版社的书有哪些？...
+2025-10-22 22:31:08,380 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 22:31:08,381 - app - INFO - [关键词优化] 优化后的有效关键词: ['红楼梦', '红楼梦》一家出版社', '书有']
+2025-10-22 22:31:08,382 - app - INFO - [关键词提取] 从问题 '与《红楼梦》一家出版社的书有哪些？...' 中提取的关键词: ['红楼梦', '红楼梦》一家出版社', '书有']
+2025-10-22 22:31:08,382 - app - INFO - [关键词详情] 关键词数量: 3, 关键词列表: ['红楼梦', '红楼梦》一家出版社', '书有']
+2025-10-22 22:31:08,383 - app - INFO - 使用提取的关键词 '['红楼梦', '红楼梦》一家出版社', '书有']' 进行深度为3的查询...
+2025-10-22 22:31:08,383 - app - INFO - 尝试查询策略: 扩展上下文查询(深度3)，使用关键词: ['红楼梦', '红楼梦》一家出版社', '书有']
+2025-10-22 22:31:08,383 - neo4j_handler - INFO - 搜索关键词: 红楼梦
+2025-10-22 22:31:08,396 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,396 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,396 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 22:31:08,403 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,404 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,404 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 22:31:08,412 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 22:31:08,413 - neo4j_handler - INFO - 搜索关键词: 红楼梦》一家出版社
+2025-10-22 22:31:08,426 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,427 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,427 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 22:31:08,434 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,435 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,435 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 22:31:08,445 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 22:31:08,445 - neo4j_handler - INFO - 搜索关键词: 书有
+2025-10-22 22:31:08,450 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,450 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,451 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 22:31:08,459 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,461 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,461 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 22:31:08,475 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 22:31:08,475 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 3 查询
+2025-10-22 22:31:08,481 - neo4j_handler - INFO - 深度 1 查询找到 5 个关系
+2025-10-22 22:31:08,487 - neo4j_handler - WARNING - 深度 2 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:08,494 - neo4j_handler - WARNING - 深度 3 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:08,495 - neo4j_handler - INFO - 扩展查询完成，找到 6 个实体和 5 个关系
+2025-10-22 22:31:08,496 - app - INFO - 策略 '扩展上下文查询(深度3)' 结果: 6个实体, 5个关系
+2025-10-22 22:31:08,496 - app - INFO - 查询策略 '扩展上下文查询(深度3)' 成功执行
+2025-10-22 22:31:08,496 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 22:31:08,497 - app - INFO - 原始关系数据: [{'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8', 'properties': {}}, {'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:9', 'properties': {}}, {'type': 'PUBLISHES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'properties': {}}, {'type': 'BELONGS_TO', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'properties': {}}, {'type': 'BELONGS_TO', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'properties': {}}]
+2025-10-22 22:31:08,500 - app - INFO - 完整关系数据: [{'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846984', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8', 'labels': ['Author'], 'properties': {'id': '1009', 'nationality': '中国', 'name': '曹雪芹'}}, 'properties': {}, 'source': '红楼梦', 'target': '曹雪芹'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846985', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:9', 'labels': ['Author'], 'properties': {'id': '1010', 'nationality': '中国', 'name': '周汝昌'}}, 'properties': {}, 'source': '红楼梦', 'target': '周汝昌'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155174403932160536', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'properties': {}, 'source': '红楼梦', 'target': '人民文学出版社'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103226', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}, 'source': '红楼梦', 'target': '文学'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788474', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}, 'source': '红楼梦', 'target': '小说'}]
+2025-10-22 22:31:08,501 - app - INFO - 关系数据类型: <class 'list'>
+2025-10-22 22:31:08,502 - app - INFO - 关系样本结构: ['type', 'start_node', 'end_node', 'properties']
+2025-10-22 22:31:08,502 - app - INFO - 关系样本内容: {'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8', 'properties': {}}
+2025-10-22 22:31:08,502 - app - INFO - 查询到 6 个实体和 5 个关系
+2025-10-22 22:31:08,502 - app - INFO - 实体样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698(Book), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8(Author), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:9(Author)
+2025-10-22 22:31:08,503 - app - INFO - 关系样本: 红楼梦 -WRITES-> 曹雪芹, 红楼梦 -WRITES-> 周汝昌, 红楼梦 -PUBLISHES-> 人民文学出版社
+2025-10-22 22:31:08,503 - app - INFO - 通用Neo4j查询完成，查询策略: 扩展上下文查询(深度3), 结果质量: high
+2025-10-22 22:31:08,504 - app - INFO - 返回结果包含 6 个实体和 5 个关系
+2025-10-22 22:31:08,504 - app - INFO - 查询深度: 3, 关键词数量: 3
+2025-10-22 22:31:08,504 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 22:31:08,504 - test_deep_query - INFO - 查询成功状态: True
+2025-10-22 22:31:08,504 - test_deep_query - INFO - 查询结果: 找到 6 个实体, 5 个关系, 5 个完整关系
+2025-10-22 22:31:08,505 - app - INFO - 关系类型统计: [('WRITES', 2), ('BELONGS_TO', 2), ('PUBLISHES', 1)]
+2025-10-22 22:31:08,505 - test_deep_query - INFO - 格式化结果:
+### 知识图谱信息 ###
+
+实体: 
+- 实体_unknown [Book]: {'properties': "{'id': '9787020042474', 'title': '红楼梦', 'isbn':..."}
+- 实体_unknown [Author]: {'properties': "{'id': '1009', 'nationality': '中国', 'name': '曹雪芹'}"}
+- 实体_unknown [Author]: {'properties': "{'id': '1010', 'nationality': '中国', 'name': '周汝昌'}"}
+- 实体_unknown [Publisher]: {'properties': "{'id': 'P002', 'name': '人民文学出版社'}"}
+- 实体_unknown [Category]: {'properties': "{'id': 'C008', 'name': '文学'}"}
+- 实体_unknown [Category]: {'properties': "{'id': 'C009',...
+2025-10-22 22:31:08,505 - test_deep_query - INFO - 测试用例 2 执行成功
+2025-10-22 22:31:08,506 - test_deep_query - INFO - 
+测试用例 3: 问题='百年孤独的主要人物有哪些？', 深度=2
+2025-10-22 22:31:08,506 - app - INFO - 执行通用Neo4j查询，问题: 百年孤独的主要人物有哪些？...
+2025-10-22 22:31:08,506 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 22:31:08,507 - app - INFO - [关键词优化] 优化后的有效关键词: ['百年孤独', '主要人物有']
+2025-10-22 22:31:08,507 - app - INFO - [关键词提取] 从问题 '百年孤独的主要人物有哪些？...' 中提取的关键词: ['百年孤独', '主要人物有']
+2025-10-22 22:31:08,507 - app - INFO - [关键词详情] 关键词数量: 2, 关键词列表: ['百年孤独', '主要人物有']
+2025-10-22 22:31:08,508 - app - INFO - 使用提取的关键词 '['百年孤独', '主要人物有']' 进行深度为2的查询...
+2025-10-22 22:31:08,508 - app - INFO - 尝试查询策略: 扩展上下文查询(深度3)，使用关键词: ['百年孤独', '主要人物有']
+2025-10-22 22:31:08,508 - neo4j_handler - INFO - 搜索关键词: 百年孤独
+2025-10-22 22:31:08,542 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,544 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,544 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 22:31:08,574 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,575 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,575 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 22:31:08,605 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 22:31:08,606 - neo4j_handler - INFO - 搜索关键词: 主要人物有
+2025-10-22 22:31:08,616 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,616 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,616 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 22:31:08,626 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,627 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,627 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 22:31:08,634 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 22:31:08,635 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 3 查询
+2025-10-22 22:31:08,640 - neo4j_handler - INFO - 深度 1 查询找到 5 个关系
+2025-10-22 22:31:08,645 - neo4j_handler - WARNING - 深度 2 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:08,708 - neo4j_handler - WARNING - 深度 3 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:08,709 - neo4j_handler - INFO - 扩展查询完成，找到 6 个实体和 5 个关系
+2025-10-22 22:31:08,709 - app - INFO - 策略 '扩展上下文查询(深度3)' 结果: 6个实体, 5个关系
+2025-10-22 22:31:08,710 - app - INFO - 查询策略 '扩展上下文查询(深度3)' 成功执行
+2025-10-22 22:31:08,710 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 22:31:08,711 - app - INFO - 原始关系数据: [{'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1', 'properties': {}}, {'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:2', 'properties': {}}, {'type': 'PUBLISHES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'properties': {}}, {'type': 'BELONGS_TO', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'properties': {}}, {'type': 'BELONGS_TO', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'properties': {}}]
+2025-10-22 22:31:08,711 - app - INFO - 完整关系数据: [{'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846977', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1', 'labels': ['Author'], 'properties': {'id': '1002', 'nationality': '哥伦比亚', 'name': '加西亚・马尔克斯'}}, 'properties': {}, 'source': '百年孤独', 'target': '加西亚・马尔克斯'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846978', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:2', 'labels': ['Author'], 'properties': {'id': '1003', 'nationality': '中国', 'name': '范晔'}}, 'properties': {}, 'source': '百年孤独', 'target': '范晔'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152922604118475288', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'properties': {}, 'source': '百年孤独', 'target': '人民文学出版社'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103221', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}, 'source': '百年孤独', 'target': '文学'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788469', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}, 'source': '百年孤独', 'target': '小说'}]
+2025-10-22 22:31:08,712 - app - INFO - 关系数据类型: <class 'list'>
+2025-10-22 22:31:08,712 - app - INFO - 关系样本结构: ['type', 'start_node', 'end_node', 'properties']
+2025-10-22 22:31:08,712 - app - INFO - 关系样本内容: {'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1', 'properties': {}}
+2025-10-22 22:31:08,712 - app - INFO - 查询到 6 个实体和 5 个关系
+2025-10-22 22:31:08,713 - app - INFO - 实体样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693(Book), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1(Author), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:2(Author)
+2025-10-22 22:31:08,713 - app - INFO - 关系样本: 百年孤独 -WRITES-> 加西亚・马尔克斯, 百年孤独 -WRITES-> 范晔, 百年孤独 -PUBLISHES-> 人民文学出版社
+2025-10-22 22:31:08,713 - app - INFO - 通用Neo4j查询完成，查询策略: 扩展上下文查询(深度3), 结果质量: high
+2025-10-22 22:31:08,713 - app - INFO - 返回结果包含 6 个实体和 5 个关系
+2025-10-22 22:31:08,713 - app - INFO - 查询深度: 2, 关键词数量: 2
+2025-10-22 22:31:08,714 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 22:31:08,714 - test_deep_query - INFO - 查询成功状态: True
+2025-10-22 22:31:08,714 - test_deep_query - INFO - 查询结果: 找到 6 个实体, 5 个关系, 5 个完整关系
+2025-10-22 22:31:08,715 - app - INFO - 关系类型统计: [('WRITES', 2), ('BELONGS_TO', 2), ('PUBLISHES', 1)]
+2025-10-22 22:31:08,716 - test_deep_query - INFO - 格式化结果:
+### 知识图谱信息 ###
+
+实体: 
+- 实体_unknown [Book]: {'properties': "{'id': '9787020165137', 'title': '百年孤独', 'isbn'..."}
+- 实体_unknown [Author]: {'properties': "{'id': '1002', 'nationality': '哥伦比亚', 'name': '..."}
+- 实体_unknown [Author]: {'properties': "{'id': '1003', 'nationality': '中国', 'name': '范晔'}"}
+- 实体_unknown [Publisher]: {'properties': "{'id': 'P002', 'name': '人民文学出版社'}"}
+- 实体_unknown [Category]: {'properties': "{'id': 'C008', 'name': '文学'}"}
+- 实体_unknown [Category]: {'properties': "{'id': 'C009', ...
+2025-10-22 22:31:08,716 - test_deep_query - INFO - 测试用例 3 执行成功
+2025-10-22 22:31:08,716 - test_deep_query - INFO - 
+=== 开始测试特定关系查询 ===
+2025-10-22 22:31:08,716 - test_deep_query - INFO - 
+测试用例 1: 问题='与《红楼梦》同一出版社的书有哪些？'
+2025-10-22 22:31:08,716 - app - INFO - 执行通用Neo4j查询，问题: 与《红楼梦》同一出版社的书有哪些？...
+2025-10-22 22:31:08,717 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 22:31:08,717 - app - INFO - [关键词优化] 优化后的有效关键词: ['红楼梦', '红楼梦》同一出版社', '书有']
+2025-10-22 22:31:08,717 - app - INFO - [关键词提取] 从问题 '与《红楼梦》同一出版社的书有哪些？...' 中提取的关键词: ['红楼梦', '红楼梦》同一出版社', '书有']
+2025-10-22 22:31:08,717 - app - INFO - [关键词详情] 关键词数量: 3, 关键词列表: ['红楼梦', '红楼梦》同一出版社', '书有']
+2025-10-22 22:31:08,717 - app - INFO - 使用提取的关键词 '['红楼梦', '红楼梦》同一出版社', '书有']' 进行深度为3的查询...
+2025-10-22 22:31:08,718 - app - INFO - 检测到特定关系查询模式，优先使用comprehensive_neo4j_query_for_mingchao
+2025-10-22 22:31:08,718 - app - INFO - 尝试查询策略: 综合增强查询，使用关键词: ['红楼梦', '红楼梦》同一出版社', '书有']
+2025-10-22 22:31:08,746 - neo4j_handler - INFO - 深度查询完成，共找到 45 个关系
+2025-10-22 22:31:08,796 - neo4j_handler - INFO - 增强查询完成，找到 0 个额外实体
+2025-10-22 22:31:08,815 - neo4j_handler - INFO - 全面查询完成，共找到 28 个实体和 45 个关系
+2025-10-22 22:31:08,816 - app - INFO - 策略 '综合增强查询' 结果: 28个实体, 45个关系
+2025-10-22 22:31:08,816 - app - INFO - 查询策略 '综合增强查询' 成功执行
+2025-10-22 22:31:08,816 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 22:31:08,817 - app - INFO - 原始关系数据: ['5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103350', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846985', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103306', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846984', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152922604118475288', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103234', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1161929803373216280', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103256', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788474', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788512', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1164181603186901528', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103284', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103335', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103330', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103278', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1159678003559531032', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788504', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788492', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155174403932160536', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103325', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788484', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103282', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103221', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1168685202814272024', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103236', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103345', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788532', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103264', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103315', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1170937002627957272', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103244', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103294', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103355', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103246', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788469', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103340', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788482', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788494', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103226', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788542', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103356', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1166433403000586776', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1157426203745845784', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103320', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788530']
+2025-10-22 22:31:08,817 - app - INFO - 完整关系数据: [{'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846984', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:8', 'labels': ['Author'], 'properties': {'id': '1009', 'nationality': '中国', 'name': '曹雪芹'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846985', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:9', 'labels': ['Author'], 'properties': {'id': '1010', 'nationality': '中国', 'name': '周汝昌'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155174403932160536', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152922604118475288', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1157426203745845784', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:708', 'labels': ['Book'], 'properties': {'id': '9787020108403', 'title': '平凡的世界', 'isbn': '9787020108403', 'publish_year': 2013}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1159678003559531032', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:718', 'labels': ['Book'], 'properties': {'id': '9787020094508', 'title': '活着', 'isbn': '9787020094508', 'publish_year': 2012}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1161929803373216280', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:728', 'labels': ['Book'], 'properties': {'id': '9787020082194', 'title': '许三观卖血记', 'isbn': '9787020082194', 'publish_year': 2010}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1164181603186901528', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:750', 'labels': ['Book'], 'properties': {'id': '9787020157328', 'title': '朝花夕拾', 'isbn': '9787020157328', 'publish_year': 2019}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1170937002627957272', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756', 'labels': ['Book'], 'properties': {'id': '9787020105709', 'title': '骆驼祥子', 'isbn': '9787020105709', 'publish_year': 2012}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1166433403000586776', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766', 'labels': ['Book'], 'properties': {'id': '9787020161245', 'title': '四世同堂', 'isbn': '9787020161245', 'publish_year': 2020}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1168685202814272024', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:778', 'labels': ['Book'], 'properties': {'id': '9787020167815', 'title': '呐喊', 'isbn': '9787020167815', 'publish_year': 2021}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103226', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103221', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103234', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:706', 'labels': ['Book'], 'properties': {'id': '9780553573404', 'title': 'A Game of Thrones', 'isbn': '9780553573404', 'publish_year': 1996}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103236', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:708', 'labels': ['Book'], 'properties': {'id': '9787020108403', 'title': '平凡的世界', 'isbn': '9787020108403', 'publish_year': 2013}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103244', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:716', 'labels': ['Book'], 'properties': {'id': '9780141439518', 'title': 'Pride and Prejudice', 'isbn': '9780141439518', 'publish_year': 2009}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103246', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:718', 'labels': ['Book'], 'properties': {'id': '9787020094508', 'title': '活着', 'isbn': '9787020094508', 'publish_year': 2012}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103256', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:728', 'labels': ['Book'], 'properties': {'id': '9787020082194', 'title': '许三观卖血记', 'isbn': '9787020082194', 'publish_year': 2010}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103264', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:736', 'labels': ['Book'], 'properties': {'id': '9780553380163', 'title': 'The Lord of the Rings', 'isbn': '9780553380163', 'publish_year': 1954}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103278', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:750', 'labels': ['Book'], 'properties': {'id': '9787020157328', 'title': '朝花夕拾', 'isbn': '9787020157328', 'publish_year': 2019}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103282', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:754', 'labels': ['Book'], 'properties': {'id': '9780553579605', 'title': 'A Clash of Kings', 'isbn': '9780553579605', 'publish_year': 1999}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103284', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756', 'labels': ['Book'], 'properties': {'id': '9787020105709', 'title': '骆驼祥子', 'isbn': '9787020105709', 'publish_year': 2012}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103294', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766', 'labels': ['Book'], 'properties': {'id': '9787020161245', 'title': '四世同堂', 'isbn': '9787020161245', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103306', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:778', 'labels': ['Book'], 'properties': {'id': '9787020167815', 'title': '呐喊', 'isbn': '9787020167815', 'publish_year': 2021}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103315', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:787', 'labels': ['Book'], 'properties': {'id': '9787500747256', 'title': '小猪唏哩呼噜', 'isbn': '9787500747256', 'publish_year': 2021}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103320', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:792', 'labels': ['Book'], 'properties': {'id': '9787533299876', 'title': '草房子', 'isbn': '9787533299876', 'publish_year': 2019}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103325', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:797', 'labels': ['Book'], 'properties': {'id': '9787532499876', 'title': '没头脑和不高兴', 'isbn': '9787532499876', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103330', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:802', 'labels': ['Book'], 'properties': {'id': '9787533288765', 'title': '青铜葵花', 'isbn': '9787533288765', 'publish_year': 2018}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103335', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:807', 'labels': ['Book'], 'properties': {'id': '9787532488765', 'title': '大头儿子和小头爸爸', 'isbn': '9787532488765', 'publish_year': 2019}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103340', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:812', 'labels': ['Book'], 'properties': {'id': '9787533277654', 'title': '绿山墙的安妮', 'isbn': '9787533277654', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103345', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:817', 'labels': ['Book'], 'properties': {'id': '9787532477654', 'title': '小王子', 'isbn': '9787532477654', 'publish_year': 2021}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103350', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:822', 'labels': ['Book'], 'properties': {'id': '9787533266543', 'title': '窗边的小豆豆', 'isbn': '9787533266543', 'publish_year': 2019}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103355', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:827', 'labels': ['Book'], 'properties': {'id': '9787532466543', 'title': '夏洛的网', 'isbn': '9787532466543', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103356', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:828', 'labels': ['Book'], 'properties': {'id': '9787101157890', 'title': '楚辞选注', 'isbn': '9787101157890', 'publish_year': 2022}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788474', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788469', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788482', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:706', 'labels': ['Book'], 'properties': {'id': '9780553573404', 'title': 'A Game of Thrones', 'isbn': '9780553573404', 'publish_year': 1996}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788484', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:708', 'labels': ['Book'], 'properties': {'id': '9787020108403', 'title': '平凡的世界', 'isbn': '9787020108403', 'publish_year': 2013}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788492', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:716', 'labels': ['Book'], 'properties': {'id': '9780141439518', 'title': 'Pride and Prejudice', 'isbn': '9780141439518', 'publish_year': 2009}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788494', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:718', 'labels': ['Book'], 'properties': {'id': '9787020094508', 'title': '活着', 'isbn': '9787020094508', 'publish_year': 2012}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788504', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:728', 'labels': ['Book'], 'properties': {'id': '9787020082194', 'title': '许三观卖血记', 'isbn': '9787020082194', 'publish_year': 2010}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788512', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:736', 'labels': ['Book'], 'properties': {'id': '9780553380163', 'title': 'The Lord of the Rings', 'isbn': '9780553380163', 'publish_year': 1954}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788530', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:754', 'labels': ['Book'], 'properties': {'id': '9780553579605', 'title': 'A Clash of Kings', 'isbn': '9780553579605', 'publish_year': 1999}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788532', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756', 'labels': ['Book'], 'properties': {'id': '9787020105709', 'title': '骆驼祥子', 'isbn': '9787020105709', 'publish_year': 2012}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788542', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766', 'labels': ['Book'], 'properties': {'id': '9787020161245', 'title': '四世同堂', 'isbn': '9787020161245', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}]
+2025-10-22 22:31:08,820 - app - INFO - 关系数据类型: <class 'list'>
+2025-10-22 22:31:08,820 - app - ERROR - 通用Neo4j查询异常: 'str' object has no attribute 'keys'
+2025-10-22 22:31:08,824 - app - ERROR - 错误堆栈: Traceback (most recent call last):
+  File "C:\Users\Hzy\Desktop\向量数据库和知识图谱\LIMS 作品源码\LIMS 作品源码\Back(python)\app.py", line 713, in generic_neo4j_query
+    app.logger.info(f"关系样本结构: {list(sample_rel.keys())}")
+                                          ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+
+2025-10-22 22:31:08,824 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 22:31:08,824 - test_deep_query - INFO - 查询成功状态: False
+2025-10-22 22:31:08,825 - test_deep_query - INFO - 测试用例 1 执行成功
+2025-10-22 22:31:08,825 - test_deep_query - INFO - 
+测试用例 2: 问题='《百年孤独》和哪些书是同一个出版社出版的？'
+2025-10-22 22:31:08,825 - app - INFO - 执行通用Neo4j查询，问题: 《百年孤独》和哪些书是同一个出版社出版的？...
+2025-10-22 22:31:08,825 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 22:31:08,825 - app - INFO - [关键词优化] 优化后的有效关键词: ['百年孤独', '出版社出版']
+2025-10-22 22:31:08,826 - app - INFO - [关键词提取] 从问题 '《百年孤独》和哪些书是同一个出版社出版的...' 中提取的关键词: ['百年孤独', '出版社出版']
+2025-10-22 22:31:08,826 - app - INFO - [关键词详情] 关键词数量: 2, 关键词列表: ['百年孤独', '出版社出版']
+2025-10-22 22:31:08,827 - app - INFO - 使用提取的关键词 '['百年孤独', '出版社出版']' 进行深度为3的查询...
+2025-10-22 22:31:08,827 - app - INFO - 尝试查询策略: 扩展上下文查询(深度3)，使用关键词: ['百年孤独', '出版社出版']
+2025-10-22 22:31:08,828 - neo4j_handler - INFO - 搜索关键词: 百年孤独
+2025-10-22 22:31:08,838 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,838 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,839 - neo4j_handler - INFO - 查询策略 1 找到 1 个节点
+2025-10-22 22:31:08,850 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,850 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,850 - neo4j_handler - INFO - 查询策略 2 找到 1 个节点
+2025-10-22 22:31:08,859 - neo4j_handler - INFO - 查询策略 3 找到 1 个节点
+2025-10-22 22:31:08,860 - neo4j_handler - INFO - 搜索关键词: 出版社出版
+2025-10-22 22:31:08,865 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 95, offset: 129} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,865 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 76, offset: 110} for query: '\n                        MATCH (n)\n                        WHERE n.name = $keyword OR n.title = $keyword OR n.书名 = $keyword OR n.label = $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,866 - neo4j_handler - INFO - 查询策略 1 找到 0 个节点
+2025-10-22 22:31:08,873 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: 书名)} {position: line: 3, column: 90, offset: 124} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,874 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: label)} {position: line: 3, column: 116, offset: 150} for query: '\n                        MATCH (n)\n                        WHERE n.name CONTAINS $keyword OR n.title CONTAINS $keyword OR n.书名 CONTAINS $keyword OR n.label CONTAINS $keyword\n                        RETURN elementId(n) as id, labels(n) as labels, properties(n) as properties\n                        LIMIT 15\n                        '
+2025-10-22 22:31:08,875 - neo4j_handler - INFO - 查询策略 2 找到 0 个节点
+2025-10-22 22:31:08,884 - neo4j_handler - INFO - 查询策略 3 找到 0 个节点
+2025-10-22 22:31:08,885 - neo4j_handler - INFO - 找到 1 个初始节点，开始深度 3 查询
+2025-10-22 22:31:08,892 - neo4j_handler - INFO - 深度 1 查询找到 5 个关系
+2025-10-22 22:31:08,902 - neo4j_handler - WARNING - 深度 2 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:08,908 - neo4j_handler - WARNING - 深度 3 查询失败: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input '}': expected ':' (line 2, column 53 (offset: 53))
+"                        MATCH path = (start)-[*1..{d}]-(end)"
+                                                     ^}
+2025-10-22 22:31:08,908 - neo4j_handler - INFO - 扩展查询完成，找到 6 个实体和 5 个关系
+2025-10-22 22:31:08,908 - app - INFO - 策略 '扩展上下文查询(深度3)' 结果: 6个实体, 5个关系
+2025-10-22 22:31:08,909 - app - INFO - 查询策略 '扩展上下文查询(深度3)' 成功执行
+2025-10-22 22:31:08,909 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 22:31:08,909 - app - INFO - 原始关系数据: [{'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1', 'properties': {}}, {'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:2', 'properties': {}}, {'type': 'PUBLISHES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'properties': {}}, {'type': 'BELONGS_TO', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'properties': {}}, {'type': 'BELONGS_TO', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'properties': {}}]
+2025-10-22 22:31:08,909 - app - INFO - 完整关系数据: [{'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846977', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1', 'labels': ['Author'], 'properties': {'id': '1002', 'nationality': '哥伦比亚', 'name': '加西亚・马尔克斯'}}, 'properties': {}, 'source': '百年孤独', 'target': '加西亚・马尔克斯'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606846978', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:2', 'labels': ['Author'], 'properties': {'id': '1003', 'nationality': '中国', 'name': '范晔'}}, 'properties': {}, 'source': '百年孤独', 'target': '范晔'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152922604118475288', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'properties': {}, 'source': '百年孤独', 'target': '人民文学出版社'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103221', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}, 'source': '百年孤独', 'target': '文学'}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788469', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}, 'source': '百年孤独', 'target': '小说'}]
+2025-10-22 22:31:08,910 - app - INFO - 关系数据类型: <class 'list'>
+2025-10-22 22:31:08,910 - app - INFO - 关系样本结构: ['type', 'start_node', 'end_node', 'properties']
+2025-10-22 22:31:08,911 - app - INFO - 关系样本内容: {'type': 'WRITES', 'start_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'end_node': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1', 'properties': {}}
+2025-10-22 22:31:08,911 - app - INFO - 查询到 6 个实体和 5 个关系
+2025-10-22 22:31:08,912 - app - INFO - 实体样本: 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693(Book), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:1(Author), 4:2324ee93-d646-4fee-8e8d-fbafbaf62854:2(Author)
+2025-10-22 22:31:08,913 - app - INFO - 关系样本: 百年孤独 -WRITES-> 加西亚・马尔克斯, 百年孤独 -WRITES-> 范晔, 百年孤独 -PUBLISHES-> 人民文学出版社
+2025-10-22 22:31:08,913 - app - INFO - 通用Neo4j查询完成，查询策略: 扩展上下文查询(深度3), 结果质量: high
+2025-10-22 22:31:08,913 - app - INFO - 返回结果包含 6 个实体和 5 个关系
+2025-10-22 22:31:08,913 - app - INFO - 查询深度: 3, 关键词数量: 2
+2025-10-22 22:31:08,914 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 22:31:08,914 - test_deep_query - INFO - 查询成功状态: True
+2025-10-22 22:31:08,914 - test_deep_query - INFO - 查询结果: 找到 6 个实体, 5 个关系
+2025-10-22 22:31:08,914 - test_deep_query - INFO - 找到 0 个出版社实体, 1 个出版关系
+2025-10-22 22:31:08,914 - test_deep_query - INFO - 测试用例 2 执行成功
+2025-10-22 22:31:08,915 - test_deep_query - INFO - 
+测试用例 3: 问题='找出与《骆驼祥子》同出版社的作品'
+2025-10-22 22:31:08,915 - app - INFO - 执行通用Neo4j查询，问题: 找出与《骆驼祥子》同出版社的作品...
+2025-10-22 22:31:08,915 - app - INFO - Neo4j处理器连接成功，开始提取关键词
+2025-10-22 22:31:08,915 - app - INFO - [关键词优化] 优化后的有效关键词: ['骆驼祥子', '找出与《骆驼祥子》同出版社的', '找出', '骆驼祥子》同出版社', '作品']
+2025-10-22 22:31:08,916 - app - INFO - [关键词提取] 从问题 '找出与《骆驼祥子》同出版社的作品...' 中提取的关键词: ['骆驼祥子', '找出与《骆驼祥子》同出版社的', '找出', '骆驼祥子》同出版社', '作品']
+2025-10-22 22:31:08,916 - app - INFO - [关键词详情] 关键词数量: 5, 关键词列表: ['骆驼祥子', '找出与《骆驼祥子》同出版社的', '找出', '骆驼祥子》同出版社', '作品']
+2025-10-22 22:31:08,916 - app - INFO - 使用提取的关键词 '['骆驼祥子', '找出与《骆驼祥子》同出版社的', '找出', '骆驼祥子》同出版社', '作品']' 进行深度为3的查询...
+2025-10-22 22:31:08,917 - app - INFO - 检测到特定关系查询模式，优先使用comprehensive_neo4j_query_for_mingchao
+2025-10-22 22:31:08,917 - app - INFO - 尝试查询策略: 综合增强查询，使用关键词: ['骆驼祥子', '找出与《骆驼祥子》同出版社的', '找出', '骆驼祥子》同出版社', '作品']
+2025-10-22 22:31:08,965 - neo4j_handler - INFO - 深度查询完成，共找到 45 个关系
+2025-10-22 22:31:09,020 - neo4j_handler - INFO - 增强查询完成，找到 0 个额外实体
+2025-10-22 22:31:09,027 - neo4j_handler - INFO - 全面查询完成，共找到 28 个实体和 45 个关系
+2025-10-22 22:31:09,028 - app - INFO - 策略 '综合增强查询' 结果: 28个实体, 45个关系
+2025-10-22 22:31:09,028 - app - INFO - 查询策略 '综合增强查询' 成功执行
+2025-10-22 22:31:09,028 - app - INFO - 查询结果类型: <class 'dict'>
+2025-10-22 22:31:09,029 - app - INFO - 原始关系数据: ['5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103350', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103306', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152922604118475288', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103234', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1161929803373216280', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103256', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788474', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788512', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1164181603186901528', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103284', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103335', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103330', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103278', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1159678003559531032', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788504', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788492', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155174403932160536', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103325', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606847080', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788484', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103282', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103221', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1168685202814272024', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103236', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103345', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788532', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103264', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606847079', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103315', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1170937002627957272', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103244', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103294', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103355', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103246', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788469', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103340', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788482', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788494', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103226', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788542', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103356', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1166433403000586776', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1157426203745845784', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103320', '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788530']
+2025-10-22 22:31:09,030 - app - INFO - 完整关系数据: [{'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606847079', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:103', 'labels': ['Author'], 'properties': {'id': '1104', 'nationality': '中国', 'name': '老舍'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756', 'labels': ['Book'], 'properties': {'id': '9787020105709', 'title': '骆驼祥子', 'isbn': '9787020105709', 'publish_year': 2012}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152921504606847080', 'type': 'WRITES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:104', 'labels': ['Author'], 'properties': {'id': '1105', 'nationality': '中国', 'name': '舒乙'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756', 'labels': ['Book'], 'properties': {'id': '9787020105709', 'title': '骆驼祥子', 'isbn': '9787020105709', 'publish_year': 2012}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1170937002627957272', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756', 'labels': ['Book'], 'properties': {'id': '9787020105709', 'title': '骆驼祥子', 'isbn': '9787020105709', 'publish_year': 2012}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152922604118475288', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155174403932160536', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1157426203745845784', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:708', 'labels': ['Book'], 'properties': {'id': '9787020108403', 'title': '平凡的世界', 'isbn': '9787020108403', 'publish_year': 2013}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1159678003559531032', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:718', 'labels': ['Book'], 'properties': {'id': '9787020094508', 'title': '活着', 'isbn': '9787020094508', 'publish_year': 2012}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1161929803373216280', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:728', 'labels': ['Book'], 'properties': {'id': '9787020082194', 'title': '许三观卖血记', 'isbn': '9787020082194', 'publish_year': 2010}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1164181603186901528', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:750', 'labels': ['Book'], 'properties': {'id': '9787020157328', 'title': '朝花夕拾', 'isbn': '9787020157328', 'publish_year': 2019}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1166433403000586776', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766', 'labels': ['Book'], 'properties': {'id': '9787020161245', 'title': '四世同堂', 'isbn': '9787020161245', 'publish_year': 2020}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1168685202814272024', 'type': 'PUBLISHES', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:536', 'labels': ['Publisher'], 'properties': {'id': 'P002', 'name': '人民文学出版社'}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:778', 'labels': ['Book'], 'properties': {'id': '9787020167815', 'title': '呐喊', 'isbn': '9787020167815', 'publish_year': 2021}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103284', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756', 'labels': ['Book'], 'properties': {'id': '9787020105709', 'title': '骆驼祥子', 'isbn': '9787020105709', 'publish_year': 2012}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103221', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103226', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103234', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:706', 'labels': ['Book'], 'properties': {'id': '9780553573404', 'title': 'A Game of Thrones', 'isbn': '9780553573404', 'publish_year': 1996}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103236', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:708', 'labels': ['Book'], 'properties': {'id': '9787020108403', 'title': '平凡的世界', 'isbn': '9787020108403', 'publish_year': 2013}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103244', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:716', 'labels': ['Book'], 'properties': {'id': '9780141439518', 'title': 'Pride and Prejudice', 'isbn': '9780141439518', 'publish_year': 2009}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103246', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:718', 'labels': ['Book'], 'properties': {'id': '9787020094508', 'title': '活着', 'isbn': '9787020094508', 'publish_year': 2012}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103256', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:728', 'labels': ['Book'], 'properties': {'id': '9787020082194', 'title': '许三观卖血记', 'isbn': '9787020082194', 'publish_year': 2010}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103264', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:736', 'labels': ['Book'], 'properties': {'id': '9780553380163', 'title': 'The Lord of the Rings', 'isbn': '9780553380163', 'publish_year': 1954}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103278', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:750', 'labels': ['Book'], 'properties': {'id': '9787020157328', 'title': '朝花夕拾', 'isbn': '9787020157328', 'publish_year': 2019}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103282', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:754', 'labels': ['Book'], 'properties': {'id': '9780553579605', 'title': 'A Clash of Kings', 'isbn': '9780553579605', 'publish_year': 1999}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103294', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766', 'labels': ['Book'], 'properties': {'id': '9787020161245', 'title': '四世同堂', 'isbn': '9787020161245', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103306', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:778', 'labels': ['Book'], 'properties': {'id': '9787020167815', 'title': '呐喊', 'isbn': '9787020167815', 'publish_year': 2021}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103315', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:787', 'labels': ['Book'], 'properties': {'id': '9787500747256', 'title': '小猪唏哩呼噜', 'isbn': '9787500747256', 'publish_year': 2021}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103320', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:792', 'labels': ['Book'], 'properties': {'id': '9787533299876', 'title': '草房子', 'isbn': '9787533299876', 'publish_year': 2019}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103325', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:797', 'labels': ['Book'], 'properties': {'id': '9787532499876', 'title': '没头脑和不高兴', 'isbn': '9787532499876', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103330', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:802', 'labels': ['Book'], 'properties': {'id': '9787533288765', 'title': '青铜葵花', 'isbn': '9787533288765', 'publish_year': 2018}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103335', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:807', 'labels': ['Book'], 'properties': {'id': '9787532488765', 'title': '大头儿子和小头爸爸', 'isbn': '9787532488765', 'publish_year': 2019}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103340', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:812', 'labels': ['Book'], 'properties': {'id': '9787533277654', 'title': '绿山墙的安妮', 'isbn': '9787533277654', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103345', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:817', 'labels': ['Book'], 'properties': {'id': '9787532477654', 'title': '小王子', 'isbn': '9787532477654', 'publish_year': 2021}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103350', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:822', 'labels': ['Book'], 'properties': {'id': '9787533266543', 'title': '窗边的小豆豆', 'isbn': '9787533266543', 'publish_year': 2019}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103355', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:827', 'labels': ['Book'], 'properties': {'id': '9787532466543', 'title': '夏洛的网', 'isbn': '9787532466543', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1152923703630103356', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:828', 'labels': ['Book'], 'properties': {'id': '9787101157890', 'title': '楚辞选注', 'isbn': '9787101157890', 'publish_year': 2022}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:598', 'labels': ['Category'], 'properties': {'id': 'C008', 'name': '文学'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788532', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:756', 'labels': ['Book'], 'properties': {'id': '9787020105709', 'title': '骆驼祥子', 'isbn': '9787020105709', 'publish_year': 2012}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788469', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:693', 'labels': ['Book'], 'properties': {'id': '9787020165137', 'title': '百年孤独', 'isbn': '9787020165137', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788474', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:698', 'labels': ['Book'], 'properties': {'id': '9787020042474', 'title': '红楼梦', 'isbn': '9787020042474', 'publish_year': 2003}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788482', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:706', 'labels': ['Book'], 'properties': {'id': '9780553573404', 'title': 'A Game of Thrones', 'isbn': '9780553573404', 'publish_year': 1996}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788484', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:708', 'labels': ['Book'], 'properties': {'id': '9787020108403', 'title': '平凡的世界', 'isbn': '9787020108403', 'publish_year': 2013}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788492', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:716', 'labels': ['Book'], 'properties': {'id': '9780141439518', 'title': 'Pride and Prejudice', 'isbn': '9780141439518', 'publish_year': 2009}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788494', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:718', 'labels': ['Book'], 'properties': {'id': '9787020094508', 'title': '活着', 'isbn': '9787020094508', 'publish_year': 2012}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788504', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:728', 'labels': ['Book'], 'properties': {'id': '9787020082194', 'title': '许三观卖血记', 'isbn': '9787020082194', 'publish_year': 2010}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788512', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:736', 'labels': ['Book'], 'properties': {'id': '9780553380163', 'title': 'The Lord of the Rings', 'isbn': '9780553380163', 'publish_year': 1954}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788530', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:754', 'labels': ['Book'], 'properties': {'id': '9780553579605', 'title': 'A Clash of Kings', 'isbn': '9780553579605', 'publish_year': 1999}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}, {'elementId': '5:2324ee93-d646-4fee-8e8d-fbafbaf62854:1155175503443788542', 'type': 'BELONGS_TO', 'start_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:766', 'labels': ['Book'], 'properties': {'id': '9787020161245', 'title': '四世同堂', 'isbn': '9787020161245', 'publish_year': 2020}}, 'end_node': {'elementId': '4:2324ee93-d646-4fee-8e8d-fbafbaf62854:599', 'labels': ['Category'], 'properties': {'id': 'C009', 'name': '小说'}}, 'properties': {}}]
+2025-10-22 22:31:09,033 - app - INFO - 关系数据类型: <class 'list'>
+2025-10-22 22:31:09,033 - app - ERROR - 通用Neo4j查询异常: 'str' object has no attribute 'keys'
+2025-10-22 22:31:09,034 - app - ERROR - 错误堆栈: Traceback (most recent call last):
+  File "C:\Users\Hzy\Desktop\向量数据库和知识图谱\LIMS 作品源码\LIMS 作品源码\Back(python)\app.py", line 713, in generic_neo4j_query
+    app.logger.info(f"关系样本结构: {list(sample_rel.keys())}")
+                                          ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+
+2025-10-22 22:31:09,034 - app - INFO - 通用Neo4j查询流程结束
+2025-10-22 22:31:09,035 - test_deep_query - INFO - 查询成功状态: False
+2025-10-22 22:31:09,035 - test_deep_query - INFO - 测试用例 3 执行成功
+2025-10-22 22:31:09,035 - test_deep_query - INFO - 
+=== 所有测试执行完成 ===
+2025-10-22 22:31:09,036 - neo4j_handler - INFO - 已关闭Neo4j数据库连接
+2025-10-22 22:31:09,036 - test_deep_query - INFO - 已关闭Neo4j连接
+2025-10-22 22:31:09,036 - test_deep_query - INFO - 深度查询方法测试结束

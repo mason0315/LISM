@@ -1,0 +1,5 @@
+com\upc\face\utils\FaceUtil.class
+com\upc\face\service\impl\FaceServiceImpl.class
+com\upc\face\FaceServiceApplication.class
+com\upc\face\controller\FaceController.class
+com\upc\face\service\FaceService.class

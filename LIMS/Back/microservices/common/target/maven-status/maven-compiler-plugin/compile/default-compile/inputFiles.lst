@@ -1,0 +1,16 @@
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\config\FeignConfig.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\entity\AuthUser.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\entity\Book.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\entity\BorrowRecord.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\entity\Comment.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\entity\FaceFeatures.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\entity\Shelves.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\entity\ShelvesBook.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\entity\Suggestion.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\entity\UserInfo.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\entity\Users.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\feign\BookFeignClient.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\feign\UserFeignClient.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\result\Result.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\utils\JwtUtil.java
+D:\一些东西\LISM\LIMS\LIMS\Back\microservices\common\src\main\java\com\upc\common\utils\UserContext.java

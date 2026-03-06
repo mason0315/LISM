@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.upc.bookmanagement.mapper.BorrowRecordMapper">
+
+    <resultMap id="Base_BorrowReccord_List" type="com.upc.bookmanagement.entity.BorrowRecord">
+        <id property="recordId" column="record_id"/>
+        <result property="title" column="title"/>
+        <result property="userId" column="user_id"/>
+        <result property="borrowDate" column="borrow_date"/>
+        <result property="dueDate" column="due_date"/>
+        <result property="returnDate" column="return_date"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+    <sql id="Base_colum">
+        record_id, title, user_id, borrow_date, due_date, return_date, status
+    </sql>
+
+    <select id="findAll" resultMap="Base_BorrowReccord_List">
+        select <include refid="Base_colum"/>
+        from borrow_record
+        where user_id = #{userId} and title = #{title}
+    </select>
+
+    <select id="findById" resultMap="Base_BorrowReccord_List">
+        select <include refid="Base_colum"/>
+        from borrow_record
+        where  user_id = #{userId}
+    </select>
+
+    <select id="findA">
+        select *
+        from borrow_record
+    </select>
+    <select id="findBorrowed">
+        select *
+        from borrow_record
+        where status = 'borrowed'
+    </select>
+
+
+</mapper>

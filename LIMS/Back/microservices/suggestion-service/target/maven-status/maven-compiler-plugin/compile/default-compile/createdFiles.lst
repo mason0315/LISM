@@ -1,0 +1,5 @@
+com\upc\suggestion\mapper\SuggestionMapper.class
+com\upc\suggestion\SuggestionServiceApplication.class
+com\upc\suggestion\controller\SuggestionController.class
+com\upc\suggestion\service\SuggestionService.class
+com\upc\suggestion\service\impl\SuggestionServiceImpl.class

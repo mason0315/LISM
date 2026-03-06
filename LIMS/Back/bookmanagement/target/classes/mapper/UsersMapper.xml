@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.upc.bookmanagement.mapper.UsersMapper">
+
+    <resultMap id="Base_Users_List" type="com.upc.bookmanagement.entity.Users">
+        <id property="user_id" column="user_id" jdbcType="INTEGER"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="role" column="role"/>
+        <result property="email" column="email"/>
+        <result property="phone" column="phone"/>
+        <result property="faceFeatures" column="face_features"/>
+        <result property="faceImage" column="face_image"/>
+    </resultMap>
+
+    <sql id="Base_colum">
+        user_id, username, password, role, email, phone, face_features, face_image
+    </sql>
+
+    <select id="findAllUsers" resultMap="Base_Users_List">
+        select
+        <include refid="Base_colum"/>
+        from users
+    </select>
+
+    <select id="findUsersBy" resultMap="Base_Users_List">
+        select
+        <include refid="Base_colum"/>
+        from users
+        <where>
+            <if test="userId != null and userId != ''">
+                AND user_id LIKE CONCAT('%', #{userId}, '%')
+            </if>
+            <if test="username != null and username != ''">
+                AND username LIKE CONCAT('%', #{username}, '%')
+            </if>
+        </where>
+    </select>
+
+    <update id="updatepa">
+        update users set  password = #{password}
+        where user_id = #{userId}
+    </update>
+
+    <select id="findByUsername"  resultType="com.upc.bookmanagement.entity.Users">
+        SELECT
+            user_id, username, password, role, email, phone, face_features, face_image
+        FROM users
+        WHERE username = #{username}
+    </select>
+    
+    <update id="clearFaceData">
+        UPDATE users SET face_features = NULL, face_image = NULL
+        WHERE user_id = #{userId}
+    </update>
+
+</mapper>

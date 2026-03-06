@@ -1,0 +1,5 @@
+com\upc\user\controller\UserController.class
+com\upc\user\UserServiceApplication.class
+com\upc\user\service\UserService.class
+com\upc\user\service\impl\UserServiceImpl.class
+com\upc\user\mapper\UserMapper.class

@@ -1,0 +1,5 @@
+com\upc\book\BookServiceApplication.class
+com\upc\book\service\impl\BookServiceImpl.class
+com\upc\book\controller\BookController.class
+com\upc\book\service\BookService.class
+com\upc\book\mapper\BookMapper.class

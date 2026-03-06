@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.upc.user.mapper.UserMapper">
+
+    <!-- 条件查询用户 -->
+    <select id="findUsersByCondition" resultType="com.upc.common.entity.Users">
+        SELECT * FROM user_info
+        <where>
+            <if test="users.username != null and users.username != ''">
+                AND username LIKE CONCAT('%', #{users.username}, '%')
+            </if>
+            <if test="users.role != null">
+                AND role = #{users.role}
+            </if>
+            <if test="users.email != null and users.email != ''">
+                AND email LIKE CONCAT('%', #{users.email}, '%')
+            </if>
+            <if test="users.phone != null and users.phone != ''">
+                AND phone LIKE CONCAT('%', #{users.phone}, '%')
+            </if>
+        </where>
+        ORDER BY create_time DESC
+    </select>
+
+</mapper>
